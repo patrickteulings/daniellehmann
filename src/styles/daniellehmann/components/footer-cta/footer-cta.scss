@@ -1,0 +1,92 @@
+/* ----------------------------------------
+  The Footer CTA are the two blocks with
+  heading / paragraph just above the
+  actual footer
+---------------------------------------- */
+
+.footer-cta {
+  margin: 6rem auto;
+
+  // LAYOUT PROPS
+  &.wp-block-group {
+    .wp-block-group__inner-container {
+      max-width: 1232px;
+    }
+
+    .wp-block-columns {
+      display: block;
+
+      @include mq("tablet", "min") {
+        display: flex;
+      }
+    }
+
+    .wp-block-buttons {
+      margin-top: 3rem;
+    }
+  }
+
+  // COLUMN CONTENT
+  .wp-block-columns .wp-block-column {
+    position: relative;
+    padding-bottom: 6rem;
+
+    h3,
+    p {
+      a {
+        color: white;
+
+        &:visited {
+          // color: inherit;
+        }
+      }
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 158%;
+      margin-bottom: 3rem;
+      font-weight: 400;
+      font-family: $body-font;
+
+      a {
+        color: $olive;
+      }
+    }
+
+    h4 {
+      font-size: 22px;
+      line-height: 173%;
+      font-family: $body-sans-font;
+      opacity: 1;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      opacity: 0.7;
+    }
+
+    &:not(:first-child) {
+      margin-left: 0rem;
+      margin-top: 3rem;
+    }
+
+    @include mq("tablet", "min") {
+      &:not(:first-child) {
+        margin-left: 2rem;
+        margin-top: 0;
+      }
+    }
+    @include mq("tablet-wide", "min") {
+      &:not(:first-child) {
+        margin-left: 6rem;
+      }
+    }
+  }
+
+  .wp-block-buttons {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}

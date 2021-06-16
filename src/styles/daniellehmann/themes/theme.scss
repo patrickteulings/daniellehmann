@@ -1,0 +1,24 @@
+body {
+  color: #ffffff;
+
+  &.green {
+    background-color: #1d5356;
+  }
+
+  &.darkgrey {
+    background-color: $darkgrey;
+  }
+
+  &.khaki {
+    background-color: #b5b5b5;
+  }
+
+  &.freshblue {
+    background-color: $fresh-blue;
+  }
+}
+
+.entry-content-light {
+  background-color: #ededed;
+  color: $darkgrey;
+}

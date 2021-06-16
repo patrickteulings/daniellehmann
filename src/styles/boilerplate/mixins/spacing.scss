@@ -1,0 +1,16 @@
+/* ----------------------------------------
+  Adds a padding to your element. You have
+  free choice of units. In my personal
+  experience, px or % are recommended
+
+  Usage: @include innerspace(10px) or
+  Usage: @include innerspace(10rem, 5rem)
+---------------------------------------- */
+
+@mixin innerspace($horizontal: 0, $vertical: -1) {
+  @if $vertical != -1 and vertical != 0rem {
+    padding: $horizontal $vertical;
+  } @else {
+    padding: $horizontal;
+  }
+}
