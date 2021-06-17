@@ -36,7 +36,6 @@ export default class Gallery {
 
   // Navigation entry-point
   jumpToImage(item, index) {
-    alert('should open image' + index);
     if (!document.getElementById('galleryContainer')) {
       this.createGallery(index);
     } else {

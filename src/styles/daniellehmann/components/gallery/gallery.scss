@@ -19,18 +19,19 @@
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
   }
+
   .blocks-gallery-grid {
     display: flex;
     margin-left: calc(50% - (1024px / 2));
     padding-right: calc(50% - (1024px / 2));
     width: 2000px;
   }
+
   .blocks-gallery-item {
     float: left;
     padding-top: 2rem;
     width: 200px !important;
     height: 200px !important;
-    // flex: 1 1 auto;
 
     img {
       width: 13rem !important;
