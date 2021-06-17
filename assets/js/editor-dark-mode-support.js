@@ -1,7 +1,7 @@
 /* global daniellehmannIsDarkMode, setTimeout */
 
 // Check the color scheme preference and inject the classes if necessary.
-if (document.body.classList.contains("daniellehmann-supports-dark-theme")) {
+if (document.body.classList.contains("twenty-twenty-one-supports-dark-theme")) {
   daniellehmannDarkModeEditorInit();
 }
 

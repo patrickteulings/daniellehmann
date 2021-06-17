@@ -12,11 +12,11 @@
 
 /* Block Styles */
 
-.wp-block-image.is-style-daniellehmann-border img,
-.wp-block-image.is-style-daniellehmann-image-frame img {
+.wp-block-image.is-style-twenty-twenty-one-border img,
+.wp-block-image.is-style-twenty-twenty-one-image-frame img {
   border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
-.wp-block-image.is-style-daniellehmann-image-frame img {
+.wp-block-image.is-style-twenty-twenty-one-image-frame img {
   padding: var(--global--spacing-unit);
 }

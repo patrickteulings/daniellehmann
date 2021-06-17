@@ -14,3 +14,21 @@
     padding: $horizontal;
   }
 }
+
+/* ----------------------------------------
+  Simply defines width and/or height
+  When ony one parameter is given
+  width and height are equal;
+
+  Usage: @include size(20px);
+---------------------------------------- */
+
+@mixin size($width: auto, $height: auto) {
+  @if $height != auto {
+    width: $width;
+    height: $height;
+  } @else {
+    width: $width;
+    height: $width;
+  }
+}

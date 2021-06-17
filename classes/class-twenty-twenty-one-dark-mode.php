@@ -73,7 +73,7 @@ class daniellehmann_Dark_Mode
       );
     }
     wp_enqueue_script(
-      'daniellehmann-dark-mode-support-toggle',
+      'twenty-twenty-one-dark-mode-support-toggle',
       get_template_directory_uri() . '/assets/js/dark-mode-toggler.js',
       array(),
       '1.0.0',
@@ -81,9 +81,9 @@ class daniellehmann_Dark_Mode
     );
 
     wp_enqueue_script(
-      'daniellehmann-editor-dark-mode-support',
+      'twenty-twenty-one-editor-dark-mode-support',
       get_template_directory_uri() . '/assets/js/editor-dark-mode-support.js',
-      array('daniellehmann-dark-mode-support-toggle'),
+      array('twenty-twenty-one-dark-mode-support-toggle'),
       '1.0.0',
       true
     );
@@ -125,9 +125,9 @@ class daniellehmann_Dark_Mode
       return;
     }
     wp_enqueue_script(
-      'daniellehmann-customize-controls',
+      'twenty-twenty-one-customize-controls',
       get_template_directory_uri() . '/assets/js/customize.js',
-      array('customize-base', 'customize-controls', 'underscore', 'jquery', 'daniellehmann-customize-helpers'),
+      array('customize-base', 'customize-controls', 'underscore', 'jquery', 'twenty-twenty-one-customize-helpers'),
       '1.0.0',
       true
     );
@@ -279,7 +279,7 @@ class daniellehmann_Dark_Mode
       $background_color            = get_theme_mod('background_color', 'D1E4DD');
 
       if ($should_respect_color_scheme && daniellehmann_Custom_Colors::get_relative_luminance_from_hex($background_color) > 127) {
-        $classes .= ' daniellehmann-supports-dark-theme';
+        $classes .= ' twenty-twenty-one-supports-dark-theme';
       }
     }
 

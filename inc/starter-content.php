@@ -39,8 +39,8 @@ function daniellehmann_get_starter_content()
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-daniellehmann-columns-overlap"} -->
-					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-daniellehmann-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
+					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-twenty-twenty-one-columns-overlap"} -->
+					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twenty-twenty-one-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
 					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"large"} -->
 					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url(get_template_directory_uri()) . '/assets/images/roses-tremieres-hollyhocks-1884.jpg" alt="' . esc_attr__('&#8220;Roses Trémières&#8221; by Berthe Morisot', 'daniellehmann') . '"/></figure>
 					<!-- /wp:image -->
@@ -49,8 +49,8 @@ function daniellehmann_get_starter_content()
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:image {"align":"full","sizeSlug":"large","className":"is-style-daniellehmann-image-frame"} -->
-					<figure class="wp-block-image alignfull size-large is-style-daniellehmann-image-frame"><img src="' . esc_url(get_template_directory_uri()) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__('&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot', 'daniellehmann') . '"/></figure>
+					<!-- wp:image {"align":"full","sizeSlug":"large","className":"is-style-twenty-twenty-one-image-frame"} -->
+					<figure class="wp-block-image alignfull size-large is-style-twenty-twenty-one-image-frame"><img src="' . esc_url(get_template_directory_uri()) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__('&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot', 'daniellehmann') . '"/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column -->
 
@@ -59,8 +59,8 @@ function daniellehmann_get_starter_content()
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full is-style-daniellehmann-border"} -->
-					<figure class="wp-block-image size-large alignfull size-full is-style-daniellehmann-border"><img src="' . esc_url(get_template_directory_uri()) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__('&#8220;Young Woman in Mauve&#8221; by Berthe Morisot', 'daniellehmann') . '"/></figure>
+					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full is-style-twenty-twenty-one-border"} -->
+					<figure class="wp-block-image size-large alignfull size-full is-style-twenty-twenty-one-border"><img src="' . esc_url(get_template_directory_uri()) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__('&#8220;Young Woman in Mauve&#8221; by Berthe Morisot', 'daniellehmann') . '"/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
@@ -105,8 +105,8 @@ function daniellehmann_get_starter_content()
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-daniellehmann-border"} -->
-					<div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-daniellehmann-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} -->
+					<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-twenty-twenty-one-border"} -->
+					<div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-twenty-twenty-one-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} -->
 					<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 

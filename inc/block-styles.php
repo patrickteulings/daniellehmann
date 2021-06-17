@@ -24,7 +24,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/columns',
       array(
-        'name'  => 'daniellehmann-columns-overlap',
+        'name'  => 'twenty-twenty-one-columns-overlap',
         'label' => esc_html__('Overlap', 'daniellehmann'),
       )
     );
@@ -33,7 +33,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/cover',
       array(
-        'name'  => 'daniellehmann-border',
+        'name'  => 'twenty-twenty-one-border',
         'label' => esc_html__('Borders', 'daniellehmann'),
       )
     );
@@ -42,7 +42,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/group',
       array(
-        'name'  => 'daniellehmann-border',
+        'name'  => 'twenty-twenty-one-border',
         'label' => esc_html__('Borders', 'daniellehmann'),
       )
     );
@@ -51,7 +51,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/image',
       array(
-        'name'  => 'daniellehmann-border',
+        'name'  => 'twenty-twenty-one-border',
         'label' => esc_html__('Borders', 'daniellehmann'),
       )
     );
@@ -60,7 +60,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/image',
       array(
-        'name'  => 'daniellehmann-image-frame',
+        'name'  => 'twenty-twenty-one-image-frame',
         'label' => esc_html__('Frame', 'daniellehmann'),
       )
     );
@@ -69,7 +69,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/latest-posts',
       array(
-        'name'  => 'daniellehmann-latest-posts-dividers',
+        'name'  => 'twenty-twenty-one-latest-posts-dividers',
         'label' => esc_html__('Dividers', 'daniellehmann'),
       )
     );
@@ -78,7 +78,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/latest-posts',
       array(
-        'name'  => 'daniellehmann-latest-posts-borders',
+        'name'  => 'twenty-twenty-one-latest-posts-borders',
         'label' => esc_html__('Borders', 'daniellehmann'),
       )
     );
@@ -87,7 +87,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/media-text',
       array(
-        'name'  => 'daniellehmann-border',
+        'name'  => 'twenty-twenty-one-border',
         'label' => esc_html__('Borders', 'daniellehmann'),
       )
     );
@@ -96,7 +96,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/separator',
       array(
-        'name'  => 'daniellehmann-separator-thick',
+        'name'  => 'twenty-twenty-one-separator-thick',
         'label' => esc_html__('Thick', 'daniellehmann'),
       )
     );
@@ -105,7 +105,7 @@ if (function_exists('register_block_style')) {
     register_block_style(
       'core/social-links',
       array(
-        'name'  => 'daniellehmann-social-icons-color',
+        'name'  => 'twenty-twenty-one-social-icons-color',
         'label' => esc_html__('Dark gray', 'daniellehmann'),
       )
     );

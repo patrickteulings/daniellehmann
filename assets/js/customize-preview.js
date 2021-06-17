@@ -11,7 +11,7 @@
         tableColor = !isDark
           ? "var(--global--color-light-gray)"
           : "var(--global--color-dark-gray)",
-        stylesheetID = "daniellehmann-customizer-inline-styles",
+        stylesheetID = "twenty-twenty-one-customizer-inline-styles",
         stylesheet,
         styles;
 

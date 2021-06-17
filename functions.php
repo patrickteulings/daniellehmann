@@ -504,7 +504,7 @@ add_action('init', 'dl_custom_new_menu');
 function daniellehmann_block_editor_script()
 {
 
-  wp_enqueue_script('daniellehmann-editor', get_theme_file_uri('/assets/js/editor.js'), array('wp-blocks', 'wp-dom'), wp_get_theme()->get('Version'), true);
+  wp_enqueue_script('twenty-twenty-one-editor', get_theme_file_uri('/assets/js/editor.js'), array('wp-blocks', 'wp-dom'), wp_get_theme()->get('Version'), true);
 }
 
 add_action('enqueue_block_editor_assets', 'daniellehmann_block_editor_script');
@@ -595,7 +595,7 @@ new daniellehmann_Dark_Mode();
 function daniellehmann_customize_preview_init()
 {
   wp_enqueue_script(
-    'daniellehmann-customize-helpers',
+    'twenty-twenty-one-customize-helpers',
     get_theme_file_uri('/assets/js/customize-helpers.js'),
     array(),
     wp_get_theme()->get('Version'),
@@ -603,9 +603,9 @@ function daniellehmann_customize_preview_init()
   );
 
   wp_enqueue_script(
-    'daniellehmann-customize-preview',
+    'twenty-twenty-one-customize-preview',
     get_theme_file_uri('/assets/js/customize-preview.js'),
-    array('customize-preview', 'customize-selective-refresh', 'jquery', 'daniellehmann-customize-helpers'),
+    array('customize-preview', 'customize-selective-refresh', 'jquery', 'twenty-twenty-one-customize-helpers'),
     wp_get_theme()->get('Version'),
     true
   );
@@ -623,7 +623,7 @@ function daniellehmann_customize_controls_enqueue_scripts()
 {
 
   wp_enqueue_script(
-    'daniellehmann-customize-helpers',
+    'twenty-twenty-one-customize-helpers',
     get_theme_file_uri('/assets/js/customize-helpers.js'),
     array(),
     wp_get_theme()->get('Version'),

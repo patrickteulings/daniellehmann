@@ -11,7 +11,7 @@
 
   @include innerblock-margin-clear(".wp-block-column");
 
-  &.is-style-daniellehmann-columns-overlap {
+  &.is-style-twenty-twenty-one-columns-overlap {
     @include media(laptop) {
       .wp-block-column:nth-child(2n) {
         margin-left: calc(-2 * var(--global--spacing-horizontal));
