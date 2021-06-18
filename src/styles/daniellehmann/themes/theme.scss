@@ -10,9 +10,27 @@ body {
   }
 
   &.khaki {
-    background-color: #b5b5b5;
-    p {
-      color: $fresh-blue;
+    background-color: #9ea190;
+
+    .footer-cta {
+      .wp-block-columns {
+        .wp-block-column {
+          p {
+            padding: 0;
+          }
+          h3 {
+            a {
+              color: $khaki-accent;
+            }
+          }
+        }
+      }
+    }
+
+    .navigation-presentation-circle {
+      svg circle {
+        fill: rgba(158, 161, 144, 0.9);
+      }
     }
   }
 

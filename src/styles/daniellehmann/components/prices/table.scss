@@ -1,0 +1,77 @@
+.prices-table {
+  max-width: $max-content-width-desktop;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0 2rem;
+
+  .wp-block-column {
+    background: white;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      background-color: $prices-table-header;
+      padding: 2.5rem 2rem 1.5rem 2rem;
+      font-family: $body-sans-font;
+      font-size: 22px;
+      color: #727855;
+    }
+
+    p {
+      padding: 1.5rem 2rem 0 !important;
+      font-size: 14px;
+      color: #787878 !important;
+    }
+
+    &:nth-child(2) {
+      h4 {
+        background-color: $prices-table-header-alternate;
+      }
+    }
+
+    // SPACING
+    &:not(:first-child) {
+      margin-left: 1px;
+    }
+  }
+
+  .prices__inner {
+    margin-top: auto;
+    color: $khaki-accent;
+    padding: 2rem;
+    font-family: $body-sans-font;
+
+    .price {
+      vertical-align: text-bottom;
+      font-size: 24px;
+      color: #1d5356;
+
+      .lesson {
+        font-size: 16px;
+        margin-left: 1ch;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  /* ----------------------------------------
+    button inside block
+  ---------------------------------------- */
+  .wp-block-buttons {
+    padding: 2rem;
+    margin-top: auto;
+    a {
+      color: #1d5356;
+    }
+  }
+
+  .wp-block-image {
+    margin-bottom: 0;
+    height: calc(100% + 4.5rem);
+    img {
+      // width: 101%;
+      height: calc(100%);
+      object-fit: cover;
+    }
+  }
+}

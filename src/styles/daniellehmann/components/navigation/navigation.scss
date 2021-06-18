@@ -1,6 +1,11 @@
 .primary-navigation {
   position: relative;
   z-index: 200;
+  display: none;
+
+  @include mq('tablet-wide', 'min') {
+    display: block;
+  }
 
   ul {
     display: flex;
@@ -48,7 +53,7 @@
     top: calc(-99px);
     transform: scale(0.7);
 
-    @include mq("tablet-wide", "min") {
+    @include mq('tablet-wide', 'min') {
       left: -107px;
       top: -99px;
       transform: scale(1);
@@ -80,6 +85,7 @@
   background: none;
   border: 0;
   cursor: pointer;
+  z-index: 10;
 
   span {
     position: absolute;

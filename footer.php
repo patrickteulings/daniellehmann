@@ -49,21 +49,19 @@
       <h6>Meteen contact</h6>
     </div>
 
-    <div class="site-info">
-      <div class="site-name">
-        <?php if (has_custom_logo()) : ?>
-          <div class="site-logo"><?php the_custom_logo(); ?></div>
-        <?php else : ?>
-          <?php if (get_bloginfo('name') && get_theme_mod('display_title_and_tagline', true)) : ?>
-            <?php if (is_front_page() && !is_paged()) : ?>
-              <?php bloginfo('name'); ?>
-            <?php else : ?>
-              <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-            <?php endif; ?>
-          <?php endif; ?>
-        <?php endif; ?>
-      </div><!-- .site-name -->
-    </div>
+    <nav aria-label="contact options" class="footer-navigation">
+      <ul class="footer-navigation-wrapper related-items">
+        <li class="menu-item phone"><a href="">06123456</a></li>
+        <li class="menu-item mail"><a href="">daniel@daniellehmann.nl</a></li>
+      </ul>
+    </nav>
+    <h6 class="subtitle">Locaties</h6>
+    <nav aria-label="contact options" class="footer-navigation">
+      <ul class="footer-navigation-wrapper related-items">
+        <li class="menu-item location"><a href="">Den Haag</a></li>
+        <li class="menu-item location"><a href="">Rotterdam</a></li>
+      </ul>
+
   </div>
   <div class="column">
     <div class="column__title">

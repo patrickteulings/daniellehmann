@@ -8,11 +8,11 @@ footer {
   @include innerspace(8rem, 4rem);
   overflow: hidden;
 
-  @include mq("tablet", "min") {
+  @include mq('tablet', 'min') {
     grid-template-columns: 1fr 1fr;
     display: grid;
   }
-  @include mq("tablet-wide", "min") {
+  @include mq('tablet-wide', 'min') {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     display: grid;
@@ -57,7 +57,7 @@ footer {
       }
     }
 
-    @include mq("tablet", "min") {
+    @include mq('tablet', 'min') {
       &:not(:first-child) {
         margin-top: 0;
       }
@@ -74,7 +74,7 @@ footer {
             position: absolute;
             left: -24px;
             top: 0.5rem;
-            content: "";
+            content: '';
             width: 8px;
             height: 8px;
             background: url(../../assets/images/icons/list-item.svg) no-repeat;
@@ -112,7 +112,7 @@ footer {
           &:before {
             width: 24px;
             height: 24px;
-            background: url("../../assets/images/icons/feather-icons/external-link.svg");
+            background: url('../../assets/images/icons/feather-icons/external-link.svg');
             left: -36px;
             top: 0rem;
             opacity: 0.2;
@@ -128,21 +128,43 @@ footer {
 
         &.external-link a {
           &:before {
-            background: url("../../assets/images/icons/feather-icons/external-link.svg");
+            background: url('../../assets/images/icons/feather-icons/external-link.svg');
           }
         }
 
         &.youtube a {
           &:before {
-            background: url("../../assets/images/icons/feather-icons/youtube.svg");
+            background: url('../../assets/images/icons/feather-icons/youtube.svg');
           }
         }
         &.soundcloud a {
           &:before {
-            background: url("../../assets/images/icons/feather-icons/volume-1.svg");
+            background: url('../../assets/images/icons/feather-icons/volume-1.svg');
+          }
+        }
+        &.mail a {
+          &:before {
+            background: url('../../assets/images/icons/feather-icons/mail.svg');
+          }
+        }
+        &.phone a {
+          &:before {
+            background: url('../../assets/images/icons/feather-icons/phone.svg');
+          }
+        }
+        &.location a {
+          &:before {
+            background: url('../../assets/images/icons/feather-icons/map-pin.svg');
           }
         }
       }
+    }
+
+    h6.subtitle {
+      font-family: $body-sans-font;
+      margin: 2rem 0 1rem;
+      font-size: 22px;
+      color: #b5b5b5;
     }
   }
 }

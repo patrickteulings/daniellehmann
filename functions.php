@@ -666,3 +666,12 @@ function daniellehmann_add_ie_class()
 <?php
 }
 add_action('wp_footer', 'daniellehmann_add_ie_class');
+
+/**
+ * MOVE YOAST BOX BELOW ACF BOXES
+ *
+ */
+
+add_filter('wpseo_metabox_prio', function () {
+  return 'low';
+});
