@@ -600,12 +600,17 @@ a {
 .fullscreen-navigation {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 0vh;
   left: 0;
   top: 0;
   background: #152228;
   z-index: 98;
-  display: none; }
+  transform: translateX(-4000px);
+  transition: height 0.2s cubic-bezier(0, 0.325, 0.375, 0.915) 0s; }
+  .fullscreen-navigation__nav {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s cubic-bezier(0, 0.325, 0.375, 0.915) 0.2s; }
   .fullscreen-navigation.is-open {
     display: flex;
     justify-content: center;
@@ -613,7 +618,30 @@ a {
   .fullscreen-navigation .menu-item a {
     color: white;
     font-family: "Ubuntu Condensed", sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 48px;
+    position: relative; }
+    .fullscreen-navigation .menu-item a:before {
+      content: '';
+      width: 0;
+      height: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.2s cubic-bezier(0, 0.325, 0.375, 0.915) 0s;
+      background-color: rgba(255, 255, 255, 0.7); }
+    .fullscreen-navigation .menu-item a:hover:before {
+      width: 100%; }
+
+.is-open.fullscreen-navigation {
+  transform: translateX(0px);
+  opacity: 1;
+  height: 100vh; }
+
+.is-open .fullscreen-navigation__nav {
+  opacity: 1;
+  transform: translateY(0px); }
 
 p {
   font-family: "PT Serif", serif;
