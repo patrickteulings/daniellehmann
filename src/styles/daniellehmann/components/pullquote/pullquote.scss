@@ -1,19 +1,25 @@
-.wp-block-pullquote {
-  border: 0;
-  max-width: calc(#{$max-content-width-desktop} + 2rem);
-  margin: 0 auto;
-  font-style: italic;
-  font-weight: 100;
-  padding: 3rem 1.5rem;
-  font-size: 16px;
-  line-height: 179%;
-  margin-bottom: 6rem;
+.entry-content {
+  .wp-block-pullquote {
+    border: 0;
+    max-width: calc(#{$max-content-width-desktop} + 2rem);
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 100;
+    padding: 3rem 1.5rem;
+    font-size: 16px;
+    line-height: 179%;
+    margin-bottom: 6rem;
 
-  @include mq("tablet", "min") {
-    font-size: 20px;
-  }
+    @include mq('tablet', 'min') {
+      font-size: 20px;
+    }
 
-  &.narrow {
-    max-width: calc(#{$max-content-width-desktop} - 4rem);
+    &.narrow {
+      max-width: calc(#{$max-content-width-desktop} - 10rem);
+    }
+
+    p {
+      padding: 0 !important;
+    }
   }
 }

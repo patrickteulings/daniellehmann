@@ -753,7 +753,7 @@ p a {
       height: calc(100%);
       object-fit: cover; }
 
-.wp-block-pullquote {
+.entry-content .wp-block-pullquote {
   border: 0;
   max-width: calc(1232px + 2rem);
   margin: 0 auto;
@@ -764,10 +764,12 @@ p a {
   line-height: 179%;
   margin-bottom: 6rem; }
   @media (min-width: 600px) {
-    .wp-block-pullquote {
+    .entry-content .wp-block-pullquote {
       font-size: 20px; } }
-  .wp-block-pullquote.narrow {
-    max-width: calc(1232px - 4rem); }
+  .entry-content .wp-block-pullquote.narrow {
+    max-width: calc(1232px - 10rem); }
+  .entry-content .wp-block-pullquote p {
+    padding: 0 !important; }
 
 .text-image-columns {
   max-width: 1232px;
