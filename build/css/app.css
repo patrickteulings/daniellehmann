@@ -544,7 +544,8 @@ a {
   width: 144px;
   height: 152px;
   overflow: hidden;
-  pointer-events: none; }
+  pointer-events: none;
+  opacity: 0.2; }
   .navigation-presentation-circle svg {
     position: absolute;
     left: calc(-107px);
@@ -565,7 +566,7 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 99; }
+  z-index: 202; }
 
 .hamburger {
   width: 40px;
@@ -593,6 +594,8 @@ a {
       top: 31px; }
     .hamburger span:nth-child(2) {
       width: 16px; }
+  .hamburger:focus {
+    outline: none; }
 
 /* ----------------------------------------
   FULLSCREEN NAVIGATION
@@ -604,12 +607,12 @@ a {
   left: 0;
   top: 0;
   background: #152228;
-  z-index: 98;
+  z-index: 201;
   transform: translateX(-4000px);
   transition: height 0.2s cubic-bezier(0, 0.325, 0.375, 0.915) 0s; }
   .fullscreen-navigation__nav {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
     transition: all 0.3s cubic-bezier(0, 0.325, 0.375, 0.915) 0.2s; }
   .fullscreen-navigation.is-open {
     display: flex;
@@ -682,17 +685,26 @@ p a {
   color: white; }
   .prices-wrapper .prices-block {
     margin-bottom: 2.5rem; }
-    .prices-wrapper .prices-block__content {
-      display: flex; }
+    @media (min-width: 900px) {
+      .prices-wrapper .prices-block__content {
+        display: flex; } }
     .prices-wrapper .prices-block h4 {
       font-size: 20px;
       line-height: 32px;
-      margin-bottom: 1rem; }
+      margin-bottom: 0.5rem; }
+      @media (min-width: 900px) {
+        .prices-wrapper .prices-block h4 {
+          margin-bottom: 1rem; } }
     .prices-wrapper .prices-block .desc p,
     .prices-wrapper .prices-block .price {
       font-size: 16px;
       line-height: 162%;
       font-family: "Ubuntu Condensed", sans-serif; }
+    .prices-wrapper .prices-block .desc p {
+      opacity: 0.5; }
+      @media (min-width: 900px) {
+        .prices-wrapper .prices-block .desc p {
+          opacity: 1; } }
     .prices-wrapper .prices-block .desc p:last-child {
       margin-bottom: 0; }
     .prices-wrapper .prices-block .price {
@@ -701,7 +713,12 @@ p a {
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      justify-content: flex-end; }
+      justify-content: flex-start;
+      margin-top: 0.5rem; }
+      @media (min-width: 900px) {
+        .prices-wrapper .prices-block .price {
+          justify-content: flex-end;
+          margin-top: 0; } }
   .prices-wrapper .image-wrapper {
     width: calc(100% + 3rem);
     max-height: 250px;
@@ -862,6 +879,10 @@ body {
       padding: 0; }
     body.khaki .footer-cta .wp-block-columns .wp-block-column h3 a {
       color: #727855; }
+    body.khaki .entry-content > h2 {
+      color: #727855; }
+      body.khaki .entry-content > h2 em {
+        color: white; }
     body.khaki .navigation-presentation-circle svg circle {
       fill: rgba(158, 161, 144, 0.9); }
   body.freshblue {
@@ -870,23 +891,6 @@ body {
 .entry-content-light {
   background-color: #ededed;
   color: #152228; }
-
-.khaki .entry-content {
-  max-width: 1232px;
-  margin: 0 auto; }
-  .khaki .entry-content h2 {
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-    color: #727855; }
-    .khaki .entry-content h2 em {
-      color: white; }
-  .khaki .entry-content p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: white; }
-    @media (min-width: 900px) {
-      .khaki .entry-content p {
-        padding-right: 50%; } }
 
 footer {
   position: relative;
@@ -1018,12 +1022,18 @@ footer .column h6.subtitle {
       @media (min-width: 900px) {
         .entry-content .wp-block-group.centered .wp-block-group__inner-container {
           padding: 0 0; } }
+  .entry-content > p {
+    max-width: calc(1232px - 4rem);
+    margin: 0 auto;
+    padding: 0 2rem; }
   .entry-content p:last-child {
     margin-bottom: 3rem; }
-  .entry-content h2 {
+  .entry-content > h2 {
+    max-width: calc(1232px - 4rem);
     font-size: 24px;
     line-height: 158%;
     font-weight: 600;
+    margin: 0 auto;
     margin-bottom: 2rem; }
   .entry-content h3 {
     font-family: "Ubuntu Condensed", sans-serif;
@@ -1035,26 +1045,49 @@ footer .column h6.subtitle {
     margin-top: 3rem; }
 
 .content-prices-wrapper {
-  display: flex;
   max-width: 1024px;
   padding: 0 2rem;
   margin: 0 auto; }
-  .content-prices-wrapper .content {
-    padding-right: 10rem; }
-  .content-prices-wrapper .aside-prices {
-    max-width: 50%;
-    min-width: 21rem; }
+  @media (min-width: 600px) {
+    .content-prices-wrapper {
+      display: flex; } }
+  @media (min-width: 600px) {
+    .content-prices-wrapper .content {
+      padding-right: 5rem; } }
+  @media (min-width: 900px) {
+    .content-prices-wrapper .content {
+      padding-right: 10rem; } }
+  .content-prices-wrapper .content .wp-block-button__link {
+    color: #98a12f; }
+  @media (min-width: 600px) {
+    .content-prices-wrapper .aside-prices {
+      max-width: 30%;
+      min-width: 10rem; } }
+  @media (min-width: 900px) {
+    .content-prices-wrapper .aside-prices {
+      max-width: 50%;
+      min-width: 21rem; } }
+  .content-prices-wrapper .content > h2,
+  .content-prices-wrapper .aside-prices > h2 {
+    font-size: 24px;
+    line-height: 158%;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: #152228; }
 
 body,
 html {
   font-size: 16px; }
+
+body.body-is-locked {
+  overflow: hidden; }
 
 .wp-block-group {
   display: block;
   clear: both;
   display: flow-root; }
   .wp-block-group:before, .wp-block-group:after {
-    content: "";
+    content: '';
     display: block;
     clear: both; }
   .wp-block-group .wp-block-group__inner-container {

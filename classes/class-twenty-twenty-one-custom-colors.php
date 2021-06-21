@@ -69,7 +69,7 @@ class daniellehmann_Custom_Colors
   {
 
     $theme_css        = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
-    $background_color = get_theme_mod('background_color', 'D1E4DD');
+    $background_color =  'FFFFFF';
 
     if ('d1e4dd' !== strtolower($background_color)) {
       $theme_css .= '--global--color-background: #' . $background_color . ';';
@@ -100,7 +100,7 @@ class daniellehmann_Custom_Colors
    */
   public function custom_color_variables()
   {
-    if ('d1e4dd' !== strtolower(get_theme_mod('background_color', 'D1E4DD'))) {
+    if ('d1e4dd' !== strtolower(get_theme_mod('background_color', 'FFFFFF'))) {
       wp_add_inline_style('twenty-twenty-one-style', $this->generate_custom_color_variables());
     }
   }

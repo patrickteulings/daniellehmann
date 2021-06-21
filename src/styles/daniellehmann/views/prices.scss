@@ -1,25 +1,2 @@
 .khaki {
-  .entry-content {
-    max-width: $max-content-width-desktop;
-    margin: 0 auto;
-
-    h2 {
-      padding: 0 2rem;
-      margin-bottom: 2rem;
-      color: $khaki-accent;
-
-      em {
-        color: white;
-      }
-    }
-    p {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      color: white;
-
-      @include mq('tablet-wide', 'min') {
-        padding-right: 50%;
-      }
-    }
-  }
 }

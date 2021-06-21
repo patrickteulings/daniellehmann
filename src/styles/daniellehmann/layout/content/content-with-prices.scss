@@ -1,15 +1,42 @@
 .content-prices-wrapper {
-  display: flex;
   max-width: 1024px;
   padding: 0 2rem;
   margin: 0 auto;
 
+  @include mq('tablet', 'min') {
+    display: flex;
+  }
+
   .content {
-    padding-right: 10rem;
+    @include mq('tablet', 'min') {
+      padding-right: 5rem;
+    }
+    @include mq('tablet-wide', 'min') {
+      padding-right: 10rem;
+    }
+
+    .wp-block-button__link {
+      color: $olive;
+    }
   }
 
   .aside-prices {
-    max-width: 50%;
-    min-width: 21rem;
+    @include mq('tablet', 'min') {
+      max-width: 30%;
+      min-width: 10rem;
+    }
+    @include mq('tablet-wide', 'min') {
+      max-width: 50%;
+      min-width: 21rem;
+    }
+  }
+
+  .content > h2,
+  .aside-prices > h2 {
+    font-size: 24px;
+    line-height: 158%;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: $darkgrey;
   }
 }

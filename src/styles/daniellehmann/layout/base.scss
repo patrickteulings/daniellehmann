@@ -3,6 +3,10 @@ html {
   font-size: $basefontsize;
 }
 
+body.body-is-locked {
+  overflow: hidden;
+}
+
 .wp-block-group {
   // Start IE clearfix.
   // This hack is only necessary because we want to support IE11.
@@ -14,7 +18,7 @@ html {
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }

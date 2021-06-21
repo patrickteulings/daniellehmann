@@ -7,13 +7,19 @@
     margin-bottom: 2.5rem;
 
     &__content {
-      display: flex;
+      @include mq('tablet-wide', 'min') {
+        display: flex;
+      }
     }
 
     h4 {
       font-size: 20px;
       line-height: 32px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+
+      @include mq('tablet-wide', 'min') {
+        margin-bottom: 1rem;
+      }
     }
 
     .desc p,
@@ -21,6 +27,14 @@
       font-size: 16px;
       line-height: 162%;
       font-family: $body-sans-font;
+    }
+
+    .desc p {
+      opacity: 0.5;
+
+      @include mq('tablet-wide', 'min') {
+        opacity: 1;
+      }
     }
 
     .desc p:last-child {
@@ -33,7 +47,13 @@
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      justify-content: flex-end;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+
+      @include mq('tablet-wide', 'min') {
+        justify-content: flex-end;
+        margin-top: 0;
+      }
     }
   }
 

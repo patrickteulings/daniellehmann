@@ -27,6 +27,16 @@ body {
       }
     }
 
+    .entry-content {
+      > h2 {
+        color: $khaki-accent;
+
+        em {
+          color: white;
+        }
+      }
+    }
+
     .navigation-presentation-circle {
       svg circle {
         fill: rgba(158, 161, 144, 0.9);
