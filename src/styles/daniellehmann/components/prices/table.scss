@@ -3,6 +3,20 @@
   margin: 0 auto;
   margin-top: 4rem;
   padding: 0 2rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: -140px;
+    @include size(200px);
+    background-image: url('../../assets/images/circle-large-white.svg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    z-index: -1;
+    opacity: 0.4;
+  }
 
   .wp-block-column {
     background: white;

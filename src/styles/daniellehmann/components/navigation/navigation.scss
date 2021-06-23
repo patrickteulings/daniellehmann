@@ -26,6 +26,7 @@
   }
 
   a {
+    position: relative;
     text-decoration: none;
     font-family: $body-sans-font;
     text-transform: uppercase;
@@ -34,6 +35,26 @@
 
     &:visited {
       color: white;
+    }
+
+    &:after {
+      content: '';
+      background: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      right: 0;
+      left: auto;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      @include transition();
+    }
+
+    &:hover {
+      &:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
     }
   }
 }

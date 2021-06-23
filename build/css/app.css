@@ -549,6 +549,7 @@ a {
       background: white;
       color: #355361; }
   .primary-navigation a {
+    position: relative;
     text-decoration: none;
     font-family: "Ubuntu Condensed", sans-serif;
     text-transform: uppercase;
@@ -556,6 +557,20 @@ a {
     padding: 0.8rem 1rem; }
     .primary-navigation a:visited {
       color: white; }
+    .primary-navigation a:after {
+      content: '';
+      background: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      right: 0;
+      left: auto;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      transition: all 0.2s cubic-bezier(0, 0.325, 0.375, 0.915) 0s; }
+    .primary-navigation a:hover:after {
+      left: 0;
+      right: auto;
+      width: 100%; }
 
 .navigation-presentation-circle {
   position: absolute;
@@ -772,9 +787,22 @@ p a {
   margin: 0 auto;
   margin-top: 4rem;
   padding: 0 2rem;
+  position: relative;
   /* ----------------------------------------
     button inside block
   ---------------------------------------- */ }
+  .prices-table:after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: -140px;
+    width: 200px;
+    height: 200px;
+    background-image: url("../../assets/images/circle-large-white.svg");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    z-index: -1;
+    opacity: 0.4; }
   .prices-table .wp-block-column {
     background: white;
     display: flex;
@@ -864,10 +892,26 @@ p a {
       @media (min-width: 900px) {
         .text-image-columns .wp-block-column p {
           width: 80%; } }
+    .text-image-columns .wp-block-column:nth-child(1) figure:after {
+      right: -58px;
+      top: -142px; }
     .text-image-columns .wp-block-column figure {
       filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.25));
       margin: 2rem 0 3rem 0;
-      max-width: 100%; }
+      max-width: 100%;
+      position: relative; }
+      .text-image-columns .wp-block-column figure:after {
+        content: '';
+        position: absolute;
+        right: 26px;
+        top: -80px;
+        width: 200px;
+        height: 200px;
+        background-image: url("../../assets/images/circle-large-white.svg");
+        background-repeat: no-repeat;
+        background-size: 200px;
+        z-index: -1;
+        opacity: 0.1; }
       @media (min-width: 900px) {
         .text-image-columns .wp-block-column figure {
           width: 480px;
@@ -1054,7 +1098,8 @@ footer .column h6.subtitle {
     line-height: 158%;
     font-weight: 600;
     margin: 0 auto;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    padding: 0 2rem; }
   .entry-content h3 {
     font-family: "Ubuntu Condensed", sans-serif;
     font-size: 22px;

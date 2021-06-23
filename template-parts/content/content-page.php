@@ -49,6 +49,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
         <div class="hero-content">
           <?php get_template_part('template-parts/header/entry-header'); ?>
           <?php get_template_part('template-parts/header/hero-intro'); ?>
+          <?php get_template_part('template-parts/header/hero-buttons'); ?>
           <div class="wp-block-buttons">
             <?php if (get_field('hero_button_1_label')) : ?><div class="wp-block-button"><a href="<?php the_field('hero_button_2_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_1_label') ?></a></div><?php endif; ?>
             <?php if (get_field('hero_button_2_label')) : ?><div class="wp-block-button <?php the_field('hero_button_2_icon') ?>"><a href="<?php the_field('hero_button_1_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_2_label') ?></a></div><?php endif; ?>
