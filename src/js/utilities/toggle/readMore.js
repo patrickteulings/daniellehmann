@@ -20,8 +20,9 @@ export default class ReadMore {
   }
 
   addEvents() {
-    this.trigger.onclick = (e) => this.toggleElement(e);
-    this.triggerLess.onclick = (e) => this.toggleElement(e);
+    if (this.trigger) this.trigger.onclick = (e) => this.toggleElement(e);
+    if (this.triggerLess)
+      this.triggerLess.onclick = (e) => this.toggleElement(e);
   }
 
   toggleElement() {

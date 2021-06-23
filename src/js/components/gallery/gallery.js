@@ -24,7 +24,6 @@ export default class Gallery {
   getImages() {
     this.elementsArray.forEach((item, index) => {
       const img = item.getElementsByTagName('img')[0];
-      console.log(img);
       const imageObj = {
         trigger: item,
         imageURL: img.dataset.fullUrl,
