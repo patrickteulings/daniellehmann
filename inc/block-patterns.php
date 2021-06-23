@@ -26,13 +26,44 @@ if (function_exists('register_block_pattern_category')) {
  * Register Block Patterns.
  */
 if (function_exists('register_block_pattern')) {
-  // Large Text.
+
+  // Narrow-ish centered text.
+  register_block_pattern(
+    'daniellehmann/narrowish-text',
+    array(
+      'title'         => esc_html__('Narrow centered text', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:group {"className":"centered"} --><div class="wp-block-group centered"><div class="wp-block-group__inner-container"><!-- wp:heading --><h2>Jazzy gepluk of gevoelig gestrijk</h2><!-- /wp:heading --><!-- wp:paragraph --><p>At a tiny Parisian café, the adorable yet painfully shy Amélie (Audrey Tautou) accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>Hoe gaan we aan de slag?</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Amélies mother, Amandine Fouet, was a Primary School teacher from Gueugnon, she had always been unstable and nervy. She doesnt like to have her fingers all wrinkled by hot water.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>She doesnt like it when somebody she doesnt like touches her, to have the marks of the sheets on her cheek in the morning.<br>She likes the outfits of the ice-skaters on TV, to shine the flooring, to empty her handbag clean it thoroughly, and, finally, putting everything away carefully.</p><!-- /wp:paragraph --></div></div><!-- /wp:group -->'
+    )
+  );
+
+  // Foote Call to Action (two col text).
   register_block_pattern(
     'daniellehmann/footer-cta',
     array(
       'title'         => esc_html__('Footer CTA', 'daniellehmann'),
       'categories'    => array('daniellehmann'),
       'content'       => '<!-- wp:group {"className":"footer-cta"} --><div class="wp-block-group footer-cta"><div class="wp-block-group__inner-container"><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":3} --><h3>Contrabas én basgitaar lessen <em><a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">voor volwassenen</a></em></h3><!-- /wp:heading --><!-- wp:paragraph --><p>Afhankelijk van je niveau blabla</p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>Hoe gaan we aan de slag?</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Ken je de bas nog niet, boek dan eerst vrijblijvend een <a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">leuke proefles.</a></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Speel je al iets, of weet je precies wat je wilt? Leuk! Dan gaan we aan de slag.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --><!-- wp:button {"className":"phone"} --><div class="wp-block-button phone"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":3} --><h3><em><a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">Improvisatielessen</a></em> voor de gevorderde muzikant</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Afhankelijk van je niveau gaan we lekker jammen met feedback of iets anders.</p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>Klassiek of Tango</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Ken je de bas nog niet, boek dan eerst vrijblijvend een leuke proefles.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --></div><!-- /wp:columns --></div></div><!-- /wp:group -->'
+    )
+  );
+
+  // About Columns and text
+  register_block_pattern(
+    'daniellehmann/two-col-text-image',
+    array(
+      'title'         => esc_html__('Two Column Text Image', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:columns {"className":"text-image-columns"} --><div class="wp-block-columns text-image-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:heading --><h2>Muzikant</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Of je nu vol voor de jazz gaat of meer richting de tango</p><!-- /wp:paragraph --><!-- wp:image {"id":91,"sizeSlug":"large","linkDestination":"none"} --><figure class="wp-block-image size-large"><img src="http://daniellehman.local/wp-content/uploads/2021/06/daniel-profile-klein.jpg" alt="" class="wp-image-91"/></figure><!-- /wp:image --><!-- wp:paragraph --><p>Hoewel van huis uit jazzbassist, heeft Daniël zich de afgelopen jaren ontwikkeld tot één van de weinige specialisten in de Argentijnse folklore en tango in Europa. Hij toerde met <a href="https://www.patrickteulings.nl">Sexteto Canyengue</a> en speelde met Argentijnse grootheden als Juan José Mosalini en Facundo Guevara.</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:heading --><h2>Componist</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Of je nu vol voor de jazz gaat of meer richting de tango</p><!-- /wp:paragraph --><!-- wp:image {"id":112,"sizeSlug":"large","linkDestination":"none"} --><figure class="wp-block-image size-large"><img src="http://daniellehman.local/wp-content/uploads/2021/06/componist-2.jpg" alt="" class="wp-image-112"/></figure><!-- /wp:image --><!-- wp:paragraph --><p>Hoewel van huis uit jazzbassist, heeft Daniël zich de afgelopen jaren ontwikkeld tot één van de weinige specialisten in de Argentijnse folklore en tango in Europa. Hij toerde met <a href="https://www.patrickteulings.nl">Sexteto Canyengue</a> en speelde met Argentijnse grootheden als Juan José Mosalini en Facundo Guevara.</p><!-- /wp:paragraph --></div><!-- /wp:column --></div><!-- /wp:columns -->'
+    )
+  );
+
+  // Large Text.
+  register_block_pattern(
+    'daniellehmann/page-quote',
+    array(
+      'title'         => esc_html__('Page quote', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:pullquote {"className":"narrow"} --><figure class="wp-block-pullquote narrow"><blockquote><p>On September 3, 1973 6:28 pm and 32 sec. a blue fly of the Calliphorides species, whose wings can flutter 14670 times per minute landed in Saint-Vincent Street, Montmartre.</p></blockquote></figure><!-- /wp:pullquote -->'
     )
   );
 

@@ -23,6 +23,14 @@
         @include mq('tablet-wide', 'min') {
           padding: 0 0;
         }
+
+        h2 {
+          font-size: 24px;
+          line-height: 158%;
+          font-weight: 600;
+          margin: 0 auto;
+          margin-bottom: 2rem;
+        }
       }
     }
   }
