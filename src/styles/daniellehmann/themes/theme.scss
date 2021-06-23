@@ -1,13 +1,37 @@
 body {
   color: #ffffff;
 
+  /* ----------------------------------------
+    GREEN
+  ---------------------------------------- */
+
   &.green {
     background-color: #1d5356;
+
+    .phone-outlined {
+      &:after {
+        background: $green;
+      }
+    }
   }
+
+  /* ----------------------------------------
+    DARK GREY
+  ---------------------------------------- */
 
   &.darkgrey {
     background-color: $darkgrey;
+
+    .phone-outlined {
+      &:after {
+        background: $darkgrey;
+      }
+    }
   }
+
+  /* ----------------------------------------
+    KHAKI
+  ---------------------------------------- */
 
   &.khaki {
     background-color: #9ea190;
@@ -42,10 +66,26 @@ body {
         fill: rgba(158, 161, 144, 0.9);
       }
     }
+
+    .phone-outlined {
+      &:after {
+        background: #9ea190;
+      }
+    }
   }
+
+  /* ----------------------------------------
+    FRESH BLUE
+  ---------------------------------------- */
 
   &.freshblue {
     background-color: $fresh-blue;
+
+    .phone-outlined {
+      &:after {
+        background: $fresh-blue;
+      }
+    }
   }
 }
 

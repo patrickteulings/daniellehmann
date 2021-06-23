@@ -228,19 +228,19 @@ a {
     ALTERNATE ICONS EG. PHONE
   ---------------------------------------- */ }
   .wp-block-button:after {
-    content: "";
+    content: '';
     width: 44px;
     height: 44px;
     display: inline-block;
     border-radius: 22px;
     background: white;
-    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #fff;
     position: absolute;
     right: 0px;
     top: 0px;
     pointer-events: none; }
   .wp-block-button:before {
-    content: "";
+    content: '';
     width: 24px;
     height: 24px;
     background: url("../../assets/images/icons/feather-icons/chevron-right.svg");
@@ -263,7 +263,7 @@ a {
       position: absolute;
       top: -7px;
       right: -7px;
-      content: "";
+      content: '';
       border: 1px solid #fff;
       border-radius: 50%;
       height: 56px;
@@ -279,9 +279,7 @@ a {
   .wp-block-button.phone-outlined:before {
     background: url("../../assets/images/icons/feather-icons/phone-white.svg"); }
   .wp-block-button.phone-outlined:after {
-    color: white;
-    border: 1px solid #fff;
-    background: #1d5356; }
+    color: white; }
   .wp-block-button:hover .wp-block-button__link:after {
     opacity: 0.8;
     transform: rotate(-30deg) scale(1); }
@@ -893,8 +891,8 @@ p a {
         .text-image-columns .wp-block-column p {
           width: 80%; } }
     .text-image-columns .wp-block-column:nth-child(1) figure:after {
-      right: -52px;
-      top: -174px; }
+      right: -51px;
+      top: -156px; }
     .text-image-columns .wp-block-column figure {
       filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.25));
       margin: 2rem 0 3rem 0;
@@ -903,7 +901,7 @@ p a {
       .text-image-columns .wp-block-column figure:after {
         content: '';
         position: absolute;
-        right: 22px;
+        right: 11px;
         top: -80px;
         width: 200px;
         height: 200px;
@@ -932,11 +930,27 @@ p a {
     background-size: 20%; }
 
 body {
-  color: #ffffff; }
+  color: #ffffff;
+  /* ----------------------------------------
+    GREEN
+  ---------------------------------------- */
+  /* ----------------------------------------
+    DARK GREY
+  ---------------------------------------- */
+  /* ----------------------------------------
+    KHAKI
+  ---------------------------------------- */
+  /* ----------------------------------------
+    FRESH BLUE
+  ---------------------------------------- */ }
   body.green {
     background-color: #1d5356; }
+    body.green .phone-outlined:after {
+      background: #1d5356; }
   body.darkgrey {
     background-color: #152228; }
+    body.darkgrey .phone-outlined:after {
+      background: #152228; }
   body.khaki {
     background-color: #9ea190; }
     body.khaki .footer-cta .wp-block-columns .wp-block-column p {
@@ -949,8 +963,12 @@ body {
         color: white; }
     body.khaki .navigation-presentation-circle svg circle {
       fill: rgba(158, 161, 144, 0.9); }
+    body.khaki .phone-outlined:after {
+      background: #9ea190; }
   body.freshblue {
     background-color: #355361; }
+    body.freshblue .phone-outlined:after {
+      background: #355361; }
 
 .entry-content-light {
   background-color: #ededed;
