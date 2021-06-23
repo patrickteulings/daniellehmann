@@ -32,16 +32,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
       <div class="hero__inner">
         <div class="hero-content">
           <?php get_template_part('template-parts/header/entry-header'); ?>
-          <?php /* the_field('hero_intro');*/ ?>
-          <div class="hero-content__intro">
-            <p><?php echo $out ?>
-              <?php if ($hasReadMore) : ?>
-                <span class="read-more">
-                  <?php include(get_stylesheet_directory() . "/assets/images/icons/feather-icons/chevrons-right.svg"); ?>
-                </span>
-              <?php endif; ?>
-            </p>
-          </div>
+          <?php get_template_part('template-parts/header/hero-intro'); ?>
           <div class="wp-block-buttons">
             <?php if (get_field('hero_button_1_label')) : ?><div class="wp-block-button"><a href="<?php the_field('hero_button_2_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_1_label') ?></a></div><?php endif; ?>
             <?php if (get_field('hero_button_2_label')) : ?><div class="wp-block-button <?php the_field('hero_button_2_icon') ?>"><a href="<?php the_field('hero_button_1_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_2_label') ?></a></div><?php endif; ?>
@@ -53,8 +44,21 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
       </div>
     </header><!-- .entry-header -->
   <?php elseif (has_post_thumbnail()) : ?>
-    <header class="entry-header alignwide">
-      <?php daniellehmann_post_thumbnail(); ?>
+    <header class="entry-header alignwide hero">
+      <div class="hero__inner">
+        <div class="hero-content">
+          <?php get_template_part('template-parts/header/entry-header'); ?>
+          <?php get_template_part('template-parts/header/hero-intro'); ?>
+          <div class="wp-block-buttons">
+            <?php if (get_field('hero_button_1_label')) : ?><div class="wp-block-button"><a href="<?php the_field('hero_button_2_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_1_label') ?></a></div><?php endif; ?>
+            <?php if (get_field('hero_button_2_label')) : ?><div class="wp-block-button <?php the_field('hero_button_2_icon') ?>"><a href="<?php the_field('hero_button_1_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_2_label') ?></a></div><?php endif; ?>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image__inner" style="background-image: url(<?= $featured_img_url; ?>);"></div>
+        </div>
+      </div>
+
     </header><!-- .entry-header -->
   <?php endif; ?>
 

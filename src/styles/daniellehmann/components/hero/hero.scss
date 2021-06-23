@@ -8,7 +8,7 @@
   &-content {
     width: 100%;
 
-    @include mq("tablet-wide", "min") {
+    @include mq('tablet-wide', 'min') {
       width: 50%;
     }
   }
@@ -20,11 +20,11 @@
       font-size: 24px;
       line-height: 128%;
       text-transform: uppercase;
-      font-family: "Josefin Sans", sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
       font-weight: 700;
       // word-break: break-all;
 
-      @include mq("tablet", "min") {
+      @include mq('tablet', 'min') {
         font-size: 45px;
       }
     }
@@ -43,7 +43,7 @@
         right: 0%;
         height: 30%;
         width: 0%;
-        content: "";
+        content: '';
         background: white;
         opacity: 0.3;
         z-index: -1;
@@ -84,6 +84,7 @@
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+    background-position: right top;
   }
 }
 
@@ -97,10 +98,15 @@
 ---------------------------------------- */
 
 .hero-content__intro {
-  p {
+  > div {
     line-height: 210%;
     width: 80%;
   }
+
+  .full {
+    display: none;
+  }
+
   .read-more {
     // color: $olive;
     position: relative;
@@ -109,6 +115,26 @@
 
     svg {
       stroke: $olive;
+    }
+  }
+
+  .read-less {
+    // color: $olive;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+
+    svg {
+      stroke: $olive;
+    }
+  }
+
+  &.is-open {
+    .full {
+      display: block;
+    }
+    .excerpt {
+      display: none;
     }
   }
 }

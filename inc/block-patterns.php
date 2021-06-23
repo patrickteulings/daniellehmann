@@ -18,7 +18,7 @@ if (function_exists('register_block_pattern_category')) {
 
   register_block_pattern_category(
     'daniellehmann',
-    array('label' => esc_html__('Twenty Twenty-One', 'daniellehmann'))
+    array('label' => esc_html__('Daniel Lehmann', 'daniellehmann'))
   );
 }
 
@@ -26,6 +26,16 @@ if (function_exists('register_block_pattern_category')) {
  * Register Block Patterns.
  */
 if (function_exists('register_block_pattern')) {
+  // Large Text.
+  register_block_pattern(
+    'daniellehmann/footer-cta',
+    array(
+      'title'         => esc_html__('Footer CTA', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:group {"className":"footer-cta"} --><div class="wp-block-group footer-cta"><div class="wp-block-group__inner-container"><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":3} --><h3>Contrabas én basgitaar lessen <em><a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">voor volwassenen</a></em></h3><!-- /wp:heading --><!-- wp:paragraph --><p>Afhankelijk van je niveau blabla</p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>Hoe gaan we aan de slag?</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Ken je de bas nog niet, boek dan eerst vrijblijvend een <a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">leuke proefles.</a></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Speel je al iets, of weet je precies wat je wilt? Leuk! Dan gaan we aan de slag.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --><!-- wp:button {"className":"phone"} --><div class="wp-block-button phone"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":3} --><h3><em><a href="http://daniellehman.local/sample-page/" data-type="page" data-id="2">Improvisatielessen</a></em> voor de gevorderde muzikant</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Afhankelijk van je niveau gaan we lekker jammen met feedback of iets anders.</p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>Klassiek of Tango</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Ken je de bas nog niet, boek dan eerst vrijblijvend een leuke proefles.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Button</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --></div><!-- /wp:columns --></div></div><!-- /wp:group -->'
+    )
+  );
+
 
   // Large Text.
   register_block_pattern(

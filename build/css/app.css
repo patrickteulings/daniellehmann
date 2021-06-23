@@ -444,7 +444,7 @@ a {
     font-size: 24px;
     line-height: 128%;
     text-transform: uppercase;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 700; }
     @media (min-width: 600px) {
       .hero__title * {
@@ -460,7 +460,7 @@ a {
       right: 0%;
       height: 30%;
       width: 0%;
-      content: "";
+      content: '';
       background: white;
       opacity: 0.3;
       z-index: -1;
@@ -487,7 +487,8 @@ a {
   .hero-image__inner {
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: right top; }
 
 .hero-content {
   position: relative;
@@ -496,9 +497,12 @@ a {
 /* ----------------------------------------
   HERO INTRO PARAGRAPH
 ---------------------------------------- */
-.hero-content__intro p {
+.hero-content__intro > div {
   line-height: 210%;
   width: 80%; }
+
+.hero-content__intro .full {
+  display: none; }
 
 .hero-content__intro .read-more {
   position: relative;
@@ -506,6 +510,19 @@ a {
   cursor: pointer; }
   .hero-content__intro .read-more svg {
     stroke: #98a12f; }
+
+.hero-content__intro .read-less {
+  position: relative;
+  top: 5px;
+  cursor: pointer; }
+  .hero-content__intro .read-less svg {
+    stroke: #98a12f; }
+
+.hero-content__intro.is-open .full {
+  display: block; }
+
+.hero-content__intro.is-open .excerpt {
+  display: none; }
 
 /* ----------------------------------------
   BUTYON BLOCK
