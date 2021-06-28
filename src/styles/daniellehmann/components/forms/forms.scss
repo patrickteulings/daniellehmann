@@ -1,0 +1,84 @@
+div.wpforms-container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: calc(568px + 8rem);
+
+  input,
+  select,
+  button,
+  textarea {
+    font-family: $body-sans-font;
+  }
+
+  input::placeholder {
+    color: #acacac;
+  }
+}
+
+div.wpforms-container-full .wpforms-form input[type='submit'],
+div.wpforms-container-full .wpforms-form button[type='submit'],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+/* ----------------------------------------
+  LABELS
+---------------------------------------- */
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-family: $body-font;
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
+  font-family: $body-sans-font;
+  margin-top: 0.5rem;
+}
+
+/* ----------------------------------------
+  ERRORS
+---------------------------------------- */
+
+$error-color: #d5f1d8;
+
+div.wpforms-container-full .wpforms-form label.wpforms-error {
+  color: $error-color;
+  margin-top: 1rem;
+  font-family: $body-sans-font;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid,
+div.wpforms-container-full
+  .wpforms-form
+  .wpforms-field.wpforms-has-error
+  .choices__inner {
+  border: 1px solid $error-color;
+  background: $error-color;
+}
+
+/* ----------------------------------------
+  CONFIRMATION
+---------------------------------------- */
+
+.entry-content {
+  .wpforms-confirmation-container-full {
+    background: $olive;
+    padding: 2rem;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+    border: 0;
+    p,
+    p:last-child {
+      margin-bottom: 0;
+      color: #fff;
+    }
+  }
+}

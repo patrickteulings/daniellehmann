@@ -32,6 +32,7 @@
     text-transform: uppercase;
     font-size: 12px;
     padding: 0.8rem 1rem;
+    color: white;
 
     &:visited {
       color: white;
@@ -181,13 +182,16 @@
         height: 30px;
         position: absolute;
         bottom: 0;
-        left: 0;
+        right: 0;
+        left: auto;
         @include transition;
         background-color: rgba(white, 0.7);
       }
 
       &:hover {
         &:before {
+          left: 0;
+          right: auto;
           width: 100%;
         }
       }

@@ -274,6 +274,14 @@ a {
       opacity: 0;
       transition: all 0.4s cubic-bezier(0, 0.325, 0.375, 0.915) 0s;
       pointer-events: none; }
+  .wp-block-button.default:before {
+    background: url("../../assets/images/icons/feather-icons/chevron-right.svg"); }
+  .wp-block-button.default:after {
+    color: white; }
+  .wp-block-button.default-outlined:before {
+    background: url("../../assets/images/icons/feather-icons/chevron-right-white.svg"); }
+  .wp-block-button.default-outlined:after {
+    color: white; }
   .wp-block-button.phone:before {
     background: url("../../assets/images/icons/feather-icons/phone.svg"); }
   .wp-block-button.phone-outlined:before {
@@ -337,6 +345,72 @@ a {
     position: absolute;
     bottom: 0px;
     width: 100%; }
+
+div.wpforms-container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: calc(568px + 8rem); }
+  div.wpforms-container input,
+  div.wpforms-container select,
+  div.wpforms-container button,
+  div.wpforms-container textarea {
+    font-family: "Ubuntu Condensed", sans-serif; }
+  div.wpforms-container input::placeholder {
+    color: #acacac; }
+
+div.wpforms-container-full .wpforms-form input[type='submit'],
+div.wpforms-container-full .wpforms-form button[type='submit'],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  padding: 1rem 2rem;
+  margin-top: 2rem; }
+
+/* ----------------------------------------
+  LABELS
+---------------------------------------- */
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-family: "PT Serif", serif;
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
+  font-family: "Ubuntu Condensed", sans-serif;
+  margin-top: 0.5rem; }
+
+/* ----------------------------------------
+  ERRORS
+---------------------------------------- */
+div.wpforms-container-full .wpforms-form label.wpforms-error {
+  color: #d5f1d8;
+  margin-top: 1rem;
+  font-family: "Ubuntu Condensed", sans-serif; }
+
+div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid,
+div.wpforms-container-full
+.wpforms-form
+.wpforms-field.wpforms-has-error
+.choices__inner {
+  border: 1px solid #d5f1d8;
+  background: #d5f1d8; }
+
+/* ----------------------------------------
+  CONFIRMATION
+---------------------------------------- */
+.entry-content .wpforms-confirmation-container-full {
+  background: #98a12f;
+  padding: 2rem;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+  border: 0; }
+  .entry-content .wpforms-confirmation-container-full p,
+  .entry-content .wpforms-confirmation-container-full p:last-child {
+    margin-bottom: 0;
+    color: #fff; }
 
 /* ----------------------------------------
   GALLERY THUMB SLIDER STYLES
@@ -505,6 +579,9 @@ a {
 .hero-content__intro .full {
   display: none; }
 
+.hero-content__intro p a {
+  color: #ffffff; }
+
 .hero-content__intro .read-more {
   position: relative;
   top: 5px;
@@ -545,14 +622,15 @@ a {
       margin-right: 1rem; }
     .primary-navigation ul li.current-menu-item a {
       background: white;
-      color: #355361; }
+      color: #1b586e; }
   .primary-navigation a {
     position: relative;
     text-decoration: none;
     font-family: "Ubuntu Condensed", sans-serif;
     text-transform: uppercase;
     font-size: 12px;
-    padding: 0.8rem 1rem; }
+    padding: 0.8rem 1rem;
+    color: white; }
     .primary-navigation a:visited {
       color: white; }
     .primary-navigation a:after {
@@ -664,10 +742,13 @@ a {
       height: 30px;
       position: absolute;
       bottom: 0;
-      left: 0;
+      right: 0;
+      left: auto;
       transition: all 0.2s cubic-bezier(0, 0.325, 0.375, 0.915) 0s;
       background-color: rgba(255, 255, 255, 0.7); }
     .fullscreen-navigation .menu-item a:hover:before {
+      left: 0;
+      right: auto;
       width: 100%; }
 
 .is-open.fullscreen-navigation {
@@ -713,7 +794,7 @@ p a {
     bottom: 0; }
 
 .prices-wrapper {
-  background: #355361;
+  background: #1b586e;
   padding: 2rem 1.5rem;
   color: white; }
   .prices-wrapper .prices-block {
@@ -891,8 +972,8 @@ p a {
         .text-image-columns .wp-block-column p {
           width: 80%; } }
     .text-image-columns .wp-block-column:nth-child(1) figure:after {
-      right: -34px;
-      top: -148px; }
+      right: -54px;
+      top: -191px; }
     .text-image-columns .wp-block-column figure {
       filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.25));
       margin: 2rem 0 3rem 0;
@@ -901,7 +982,7 @@ p a {
       .text-image-columns .wp-block-column figure:after {
         content: '';
         position: absolute;
-        right: 9px;
+        right: 21px;
         top: -80px;
         width: 200px;
         height: 200px;
@@ -945,11 +1026,11 @@ body {
   ---------------------------------------- */ }
   body.green {
     background-color: #1d5356; }
-    body.green .phone-outlined:after {
+    body.green [class*='outlined']:after {
       background: #1d5356; }
   body.darkgrey {
     background-color: #152228; }
-    body.darkgrey .phone-outlined:after {
+    body.darkgrey [class*='outlined']:after {
       background: #152228; }
   body.khaki {
     background-color: #9ea190; }
@@ -963,12 +1044,12 @@ body {
         color: white; }
     body.khaki .navigation-presentation-circle svg circle {
       fill: rgba(158, 161, 144, 0.9); }
-    body.khaki .phone-outlined:after {
+    body.khaki [class*='outlined']:after {
       background: #9ea190; }
   body.freshblue {
-    background-color: #355361; }
-    body.freshblue .phone-outlined:after {
-      background: #355361; }
+    background-color: #1b586e; }
+    body.freshblue [class*='outlined']:after {
+      background: #1b586e; }
 
 .entry-content-light {
   background-color: #ededed;
@@ -1004,9 +1085,9 @@ footer {
       bottom: 0;
       clip-path: polygon(0% 48%, 66% 48%, 66% 100%, 0 100%); }
       footer .presentation-circle svg cirlce {
-        stroke: #355361; }
+        stroke: #1b586e; }
   footer * {
-    color: #355361;
+    color: #1b586e;
     font-family: "PT Serif", serif; }
   footer .column {
     font-family: "PT Serif", serif; }
@@ -1038,7 +1119,7 @@ footer {
     footer .column a {
       text-decoration: none; }
       footer .column a:visited {
-        color: #355361; }
+        color: #1b586e; }
 
 /* ----------------------------------------
   RELATED ITEMS MENU + ICON SYSTEM

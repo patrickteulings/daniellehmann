@@ -8,7 +8,8 @@ body {
   &.green {
     background-color: #1d5356;
 
-    .phone-outlined {
+    // Buttons
+    [class*='outlined'] {
       &:after {
         background: $green;
       }
@@ -22,7 +23,8 @@ body {
   &.darkgrey {
     background-color: $darkgrey;
 
-    .phone-outlined {
+    // Buttons
+    [class*='outlined'] {
       &:after {
         background: $darkgrey;
       }
@@ -67,7 +69,8 @@ body {
       }
     }
 
-    .phone-outlined {
+    // Buttons
+    [class*='outlined'] {
       &:after {
         background: #9ea190;
       }
@@ -81,7 +84,8 @@ body {
   &.freshblue {
     background-color: $fresh-blue;
 
-    .phone-outlined {
+    // Buttons
+    [class*='outlined'] {
       &:after {
         background: $fresh-blue;
       }

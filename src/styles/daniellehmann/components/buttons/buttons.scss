@@ -71,6 +71,25 @@
   /* ----------------------------------------
     ALTERNATE ICONS EG. PHONE
   ---------------------------------------- */
+  &.default {
+    &:before {
+      background: url('../../assets/images/icons/feather-icons/chevron-right.svg');
+    }
+
+    &:after {
+      color: white;
+    }
+  }
+
+  &.default-outlined {
+    &:before {
+      background: url('../../assets/images/icons/feather-icons/chevron-right-white.svg');
+    }
+
+    &:after {
+      color: white;
+    }
+  }
 
   &.phone {
     &:before {
