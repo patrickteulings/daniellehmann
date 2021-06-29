@@ -1,0 +1,78 @@
+/* ----------------------------------------
+  IMAGE INSIDE A CONTENT BLOCK GROUP (CENTERED)
+---------------------------------------- */
+
+:root {
+  --content-image-offset: 4rem;
+  --content-image-margin: -2rem;
+}
+
+@include mq('tablet', 'min') {
+  :root {
+    --content-image-offset: 6rem;
+    --content-image-margin: -3rem;
+  }
+}
+
+.entry-content {
+  .wp-block-group {
+    &.centered {
+      figure {
+        $offset: 4rem;
+
+        @include mq('tablet', 'min') {
+          $offset: 5rem;
+        }
+
+        margin-top: 3rem;
+
+        img {
+          max-width: calc(100% + var(--content-image-offset));
+          width: calc(100% + var(--content-image-offset));
+          margin-left: var(--content-image-margin);
+          height: auto;
+        }
+
+        figcaption {
+          color: #ffffff;
+          font-family: $body-sans-font;
+          font-style: italic;
+          text-align: left;
+          margin-top: 1.5rem;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+/* ----------------------------------------
+  IMAGE AS A BLOCK WITHOUT A WRAPPING
+  CONTAINER
+---------------------------------------- */
+
+.entry-content {
+  > figure {
+    max-width: $max-narrow-content-width-desktop;
+    margin: 0 auto;
+
+    img {
+      height: auto;
+
+      @include mq('tablet-wide', 'min') {
+        max-width: calc(100% + var(--content-image-offset));
+        width: calc(100% + var(--content-image-offset));
+        margin-left: var(--content-image-margin);
+      }
+    }
+
+    figcaption {
+      color: #ffffff;
+      font-family: $body-sans-font;
+      font-style: italic;
+      text-align: left;
+      margin-top: 1.5rem;
+      opacity: 0.6;
+    }
+  }
+}

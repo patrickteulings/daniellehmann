@@ -7,7 +7,7 @@
 $paragraph-font-size: 18px;
 $paragraph-font-size--small: 16px;
 $paragraph-line-height: 177%;
-$paragraph-line-height--small: 140%;
+$paragraph-line-height--small: 177%;
 
 $header-font-size: 45px;
 $header-font-size--small: 36px;
@@ -15,6 +15,7 @@ $header-line-height: 127%;
 $header-line-height--small: 127%;
 
 $max-content-width-desktop: 1232px;
+$max-narrow-content-width-desktop: 568px;
 
 a {
   text-decoration: none;

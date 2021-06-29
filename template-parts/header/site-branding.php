@@ -45,7 +45,7 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 <span data-module="toggle" data-config='{"toggleTrigger": ".hamburger", "toggleTarget": ".fullscreen-navigation", "activeClass":"is-open"}'>
   <div class="navigation-trigger-wrapper">
     <button class="hamburger" aria-controls="fullscreen-navigation">
-      <span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
     </button>
     <div class="navigation-presentation-circle">
       <?php require_once(__DIR__ . '/../../assets/images/circle-large.svg'); ?>

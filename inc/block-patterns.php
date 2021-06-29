@@ -29,6 +29,16 @@ if (function_exists('register_block_pattern')) {
 
   // Narrow-ish centered text.
   register_block_pattern(
+    'daniellehmann/narrow-content-extended',
+    array(
+      'title'         => esc_html__('Narrow content extended', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:group {"className":"centered"} --><div class="wp-block-group centered"><div class="wp-block-group__inner-container"><!-- wp:heading --><h2>Jazzy gepluk of gevoelig gestrijk</h2><!-- /wp:heading --><!-- wp:paragraph --><p>At a tiny Parisian café, the adorable yet painfully shy Amélie (Audrey Tautou) accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?</p><!-- /wp:paragraph --><!-- wp:image {"id":214,"sizeSlug":"large","linkDestination":"none"} --><figure class="wp-block-image size-large"><img src="http://daniellehman.local/wp-content/uploads/2021/06/ausdauer-d-e1624908242702-1024x481.jpeg" alt="ausdauer spanning" class="wp-image-214"/><figcaption>De eeuw van Ariane</figcaption></figure><!-- /wp:image --><!-- wp:heading {"level":3} --><h3>Hoe gaan we aan de slag?</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Amélies mother, Amandine Fouet, was a Primary School teacher from Gueugnon, she had always been unstable and nervy. She doesnt like to have her fingers all wrinkled by hot water.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>She doesnt like it when somebody she does not like touches her, to have the marks of the sheets on her cheek in the morning. She likes the outfits of the ice-skaters on TV, to shine the flooring, to empty her handbag clean it thoroughly, and, finally, putting everything away carefully.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Zomaar een button</a></div><!-- /wp:button --><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">En een tweede button</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div></div><!-- /wp:group -->'
+    )
+  );
+
+  // Narrow-ish centered text.
+  register_block_pattern(
     'daniellehmann/narrowish-text',
     array(
       'title'         => esc_html__('Narrow centered text', 'daniellehmann'),
