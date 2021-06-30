@@ -51,15 +51,15 @@
 
     <nav aria-label="contact options" class="footer-navigation">
       <ul class="footer-navigation-wrapper related-items">
-        <li class="menu-item phone"><a href="">06123456</a></li>
-        <li class="menu-item mail"><a href="">daniel@daniellehmann.nl</a></li>
+        <li class="menu-item phone"><a href="tel:+316123456">06123456</a></li>
+        <li class="menu-item mail"><a href="mailto:daniel@daniellehmann.nl">daniel@daniellehmann.nl</a></li>
       </ul>
     </nav>
     <h6 class="subtitle">Locaties</h6>
     <nav aria-label="contact options" class="footer-navigation">
       <ul class="footer-navigation-wrapper related-items">
-        <li class="menu-item location"><a href="">Den Haag</a></li>
-        <li class="menu-item location"><a href="">Rotterdam</a></li>
+        <li class="menu-item location"><a href="<?= get_permalink(228) ?>">Den Haag</a></li>
+        <li class="menu-item location"><a href="<?= get_permalink(238) ?>">Rotterdam</a></li>
       </ul>
 
   </div>

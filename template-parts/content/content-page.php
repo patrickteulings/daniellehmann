@@ -33,10 +33,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
         <div class="hero-content">
           <?php get_template_part('template-parts/header/entry-header'); ?>
           <?php get_template_part('template-parts/header/hero-intro'); ?>
-          <div class="wp-block-buttons">
-            <?php if (get_field('hero_button_1_label')) : ?><div class="wp-block-button"><a href="<?php the_field('hero_button_2_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_1_label') ?></a></div><?php endif; ?>
-            <?php if (get_field('hero_button_2_label')) : ?><div class="wp-block-button <?php the_field('hero_button_2_icon') ?>"><a href="<?php the_field('hero_button_1_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_2_label') ?></a></div><?php endif; ?>
-          </div>
+          <?php get_template_part('template-parts/header/hero-buttons'); ?>
         </div>
         <div class="hero-image">
           <div class="hero-image__inner" style="background-image: url(<?= $featured_img_url; ?>);"></div>
@@ -74,3 +71,10 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
     ?>
   </div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
+<!-- GOOGLE MAPS LAT LNG -->
+<?php if (get_field('latitude')) : ?>
+
+  <input type="hidden" id="mapCoordinates" data-lat="<?php the_field('latitude') ?>" data-lon="<?php the_field('longitude') ?>">
+
+<?php endif ?>

@@ -7,7 +7,7 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
-$maxTextLength = 500;
+$maxTextLength = 400;
 $in = get_field('hero_intro');
 $out = strlen($in) > $maxTextLength ? substr($in, 0, $maxTextLength) . "..." : $in;
 $hasReadMore = strlen($in) > $maxTextLength ? true . "..." : false;

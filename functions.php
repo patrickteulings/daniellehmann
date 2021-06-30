@@ -449,20 +449,28 @@ function daniellehmann_scripts()
   );
 
   // Main navigation scripts.
-  if (has_nav_menu('primary')) {
-    wp_enqueue_script(
-      'twenty-twenty-one-primary-navigation-script',
-      get_template_directory_uri() . '/build/js/app.min.js',
-      array('twenty-twenty-one-ie11-polyfills'),
-      wp_get_theme()->get('Version'),
-      true
-    );
-  }
+
+  wp_enqueue_script(
+    'twenty-twenty-one-primary-navigation-script',
+    get_template_directory_uri() . '/build/js/app.min.js',
+    array('twenty-twenty-one-ie11-polyfills'),
+    wp_get_theme()->get('Version'),
+    true
+  );
+
 
   // Responsive embeds script.
   wp_enqueue_script(
     'twenty-twenty-one-responsive-embeds-script',
     get_template_directory_uri() . '/assets/js/responsive-embeds.js',
+    array('twenty-twenty-one-ie11-polyfills'),
+    wp_get_theme()->get('Version'),
+    true
+  );
+
+  wp_enqueue_script(
+    'twenty-twenty-one-script',
+    'https://maps.googleapis.com/maps/api/js?key=AIzaSyD3cppWkbu74Fd31Es-CwmVUXnPgnSaGRc&callback=initMap&libraries=&v=weekly',
     array('twenty-twenty-one-ie11-polyfills'),
     wp_get_theme()->get('Version'),
     true

@@ -3,6 +3,7 @@
     max-width: 1232px;
     padding: 0 2rem;
     margin: 0 auto;
+    padding-bottom: 4rem;
   }
 
   &-content {
@@ -65,7 +66,16 @@
 
     h1 {
       // margin-left: 0.5ch;
-      margin-right: 0.5ch;
+      // margin-right: 0.5ch;
+    }
+
+    &--mini {
+      font-family: $body-sans-font;
+      font-size: 12px;
+      margin-bottom: 12px;
+      // font-style: italic;
+      opacity: 0.3;
+      transform: translateY(-32px);
     }
   }
 }
@@ -77,6 +87,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  opacity: 0.2;
   width: 750px;
   height: 1050px;
   z-index: 0;
@@ -86,6 +97,10 @@
     height: 100%;
     background-repeat: no-repeat;
     background-position: right top;
+  }
+
+  @include mq('tablet-wide', 'min') {
+    opacity: 1;
   }
 }
 

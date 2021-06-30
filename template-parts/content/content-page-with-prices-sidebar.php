@@ -48,8 +48,8 @@ $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
   <div class="entry-content entry-content-light">
     <div class="content-prices-wrapper">
-      <div class="content"><?php the_content(); ?></div>
-      <aside class="aside-prices">
+      <?php the_content(); ?>
+      <!-- <aside class="aside-prices">
         <h2>Tarieven</h2>
         <div class="prices-wrapper">
           <div class="prices-block">
@@ -92,7 +92,7 @@ $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
           <div class="quotation-mark" role="display">&ldquo; </div>
           <blockquote>Onze zoon Erik van 7 heeft echt grote sprongen gemaakt bij Daniël, maar nog belangrijker, hij heeft het echt heel leuk gehad!</blockquote>
         </div>
-      </aside>
+      </aside> -->
     </div>
 
   </div><!-- .entry-content -->

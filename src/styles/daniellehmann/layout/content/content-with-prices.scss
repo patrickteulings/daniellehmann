@@ -1,42 +1,71 @@
 .content-prices-wrapper {
-  max-width: 1024px;
-  padding: 0 2rem;
-  margin: 0 auto;
+  .wp-block-columns {
+    max-width: 1024px;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
 
   @include mq('tablet', 'min') {
-    display: flex;
+    //display: flex;
   }
 
   .content {
-    @include mq('tablet', 'min') {
-      padding-right: 5rem;
-    }
-    @include mq('tablet-wide', 'min') {
-      padding-right: 10rem;
-    }
+    // @include mq('tablet', 'min') {
+    //   padding-right: 5rem;
+    // }
+    // @include mq('tablet-wide', 'min') {
+    //   padding-right: 10rem;
+    // }
+  }
+  .wp-block-button__link {
+    color: $olive;
+  }
 
-    .wp-block-button__link {
-      color: $olive;
+  // .aside-prices {
+  //   @include mq('tablet', 'min') {
+  //     max-width: 30%;
+  //     min-width: 10rem;
+  //   }
+  //   @include mq('tablet-wide', 'min') {
+  //     max-width: 50%;
+  //     min-width: 21rem;
+  //   }
+  // }
+
+  .wp-block-columns {
+    .wp-block-column {
+      &:nth-child(1) {
+        @include mq('tablet', 'min') {
+          padding-right: 5rem;
+        }
+        @include mq('tablet-wide', 'min') {
+          padding-right: 10rem;
+        }
+      }
+    }
+    &:nth-child(2) {
     }
   }
 
-  .aside-prices {
-    @include mq('tablet', 'min') {
-      max-width: 30%;
-      min-width: 10rem;
-    }
-    @include mq('tablet-wide', 'min') {
-      max-width: 50%;
-      min-width: 21rem;
-    }
-  }
-
-  .content > h2,
+  h2,
   .aside-prices > h2 {
     font-size: 24px;
     line-height: 158%;
     font-weight: 600;
     margin-bottom: 3rem;
     color: $darkgrey;
+  }
+}
+
+.page-template-page_content-with-prices {
+  .entry-content {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .footer-cta {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+    color: white;
+    background-color: $fresh-blue;
   }
 }

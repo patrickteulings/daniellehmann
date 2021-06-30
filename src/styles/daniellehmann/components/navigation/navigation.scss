@@ -68,7 +68,7 @@
   height: 152px;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 1;
 
   svg {
     position: absolute;
@@ -84,7 +84,7 @@
   }
 
   svg circle {
-    stroke: white;
+    stroke: rgba(white, 0.2);
   }
 }
 

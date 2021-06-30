@@ -29,6 +29,12 @@ body {
         background: $darkgrey;
       }
     }
+
+    .navigation-presentation-circle {
+      svg circle {
+        fill: rgba($darkgrey, 0.6);
+      }
+    }
   }
 
   /* ----------------------------------------
