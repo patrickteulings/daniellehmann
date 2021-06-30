@@ -7,6 +7,10 @@ body.body-is-locked {
   overflow: hidden;
 }
 
+.site-content {
+  margin-top: 6rem;
+}
+
 .wp-block-group {
   // Start IE clearfix.
   // This hack is only necessary because we want to support IE11.
