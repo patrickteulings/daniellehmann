@@ -36,7 +36,7 @@
   }
 
   > p {
-    max-width: calc(#{$max-content-width-desktop} - 4rem);
+    max-width: calc(#{$max-narrow-content-width-desktop});
     margin: 0 auto;
     padding: 0 2rem;
   }
@@ -46,8 +46,12 @@
     margin-bottom: 3rem;
   }
 
-  > h2 {
-    max-width: calc(#{$max-content-width-desktop} - 4rem);
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    max-width: calc(#{$max-narrow-content-width-desktop});
     font-size: 24px;
     line-height: 158%;
     font-weight: 600;
@@ -56,13 +60,24 @@
     padding: 0 2rem;
   }
 
+  > h3 {
+    font-size: 22px;
+  }
+
+  > h4 {
+    font-size: 20px;
+  }
+
+  > h5 {
+    font-size: 18px;
+  }
+
   h3 {
     font-family: $body-sans-font;
     font-size: 22px;
     line-height: 173%;
     margin-bottom: 1.5rem;
     padding-top: 1rem;
-    //   }
   }
 
   h2:not(:first-child) {

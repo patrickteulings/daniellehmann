@@ -6,12 +6,18 @@ body {
   ---------------------------------------- */
 
   &.green {
-    background-color: #1d5356;
+    background-color: $green;
 
     // Buttons
     [class*='outlined'] {
       &:after {
         background: $green;
+      }
+    }
+
+    .navigation-presentation-circle {
+      svg circle {
+        fill: rgba($green, 0.6);
       }
     }
   }

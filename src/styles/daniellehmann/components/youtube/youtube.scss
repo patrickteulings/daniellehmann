@@ -1,4 +1,6 @@
 .youtube-embeds {
+  padding-top: 3rem;
+
   &.wp-block-group {
     .wp-block-group__inner-container {
       max-width: calc(1232px + 4rem);
@@ -10,7 +12,7 @@
       .wp-block-embed__wrapper {
         border: 8px solid white;
         box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.4);
-        background: url("../../assets/images/icons/feather-icons/youtube-white.svg")
+        background: url('../../assets/images/icons/feather-icons/youtube-white.svg')
           no-repeat center center;
         background-size: 20%;
       }
