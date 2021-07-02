@@ -32,9 +32,9 @@
     }
 
     p {
-      padding: 1.5rem 2rem 0 !important;
+      padding: 1.5rem 2rem 0;
       font-size: 14px;
-      color: #787878 !important;
+      color: #787878;
     }
 
     &:nth-child(2) {
@@ -47,12 +47,17 @@
     &:not(:first-child) {
       margin-left: 1px;
     }
+
+    figcaption {
+      @extend .screen-reader-text;
+    }
   }
 
   .prices__inner {
     margin-top: auto;
     color: $khaki-accent;
     padding: 2rem;
+    padding-top: 0;
     font-family: $body-sans-font;
 
     .price {
@@ -61,6 +66,38 @@
       color: #1d5356;
 
       .lesson {
+        font-size: 16px;
+        margin-left: 1ch;
+        opacity: 0.6;
+      }
+    }
+
+    + p {
+      display: none; // An empty <p></p> element gets added by wordpress when using a Block Pattern
+    }
+  }
+
+  .wp-block-group.prices__inner {
+    margin-bottom: 0;
+    margin-top: auto;
+    padding: 2rem;
+
+    .wp-block-group__inner-container {
+      padding: 0;
+    }
+
+    p {
+      font-family: $body-sans-font;
+      vertical-align: text-bottom;
+      font-size: 24px;
+      color: #1d5356;
+      margin-bottom: 0;
+      padding: 0 !important;
+      display: block;
+      line-height: 130%;
+
+      span {
+        color: $khaki-accent;
         font-size: 16px;
         margin-left: 1ch;
         opacity: 0.6;

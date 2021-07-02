@@ -67,13 +67,23 @@ if (function_exists('register_block_pattern')) {
     )
   );
 
-  // Large Text.
+  // Page Quote.
   register_block_pattern(
     'daniellehmann/page-quote',
     array(
       'title'         => esc_html__('Page quote', 'daniellehmann'),
       'categories'    => array('daniellehmann'),
       'content'       => '<!-- wp:pullquote {"className":"narrow"} --><figure class="wp-block-pullquote narrow"><blockquote><p>On September 3, 1973 6:28 pm and 32 sec. a blue fly of the Calliphorides species, whose wings can flutter 14670 times per minute landed in Saint-Vincent Street, Montmartre.</p></blockquote></figure><!-- /wp:pullquote -->'
+    )
+  );
+
+  // Prices Wide block.
+  register_block_pattern(
+    'daniellehmann/prices-wide',
+    array(
+      'title'         => esc_html__('Prices wide', 'daniellehmann'),
+      'categories'    => array('daniellehmann'),
+      'content'       => '<!-- wp:heading --><h2>Bas- of contrabas-lessen voor <em>kinderen</em></h2><!-- /wp:heading --><!-- wp:paragraph --><p>Werken met kinderen heeft een speciale aanpak, en daarom ook speciale tarieven.Materiaalgebruik is altijd bij de tarieven inbegrepen, de BTW ook.</p><!-- /wp:paragraph --><!-- wp:columns {"className":"prices-table"} --><div class="wp-block-columns prices-table"><!-- wp:column {"width":"26%"} --><div class="wp-block-column" style="flex-basis:26%"><!-- wp:heading {"level":4} --><h4>Individuele les</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Een uur lang persoonlijke begeleiding</p><!-- /wp:paragraph --><!-- wp:group --><div class="wp-block-group prices__inner"><div class="wp-block-group__inner-container"><!-- wp:paragraph --><p>40,-<span> &#47; les</span></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>40,-<span> &#47; les</span></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column {"width":"26%"} --><div class="wp-block-column" style="flex-basis:26%"><!-- wp:heading {"level":4} --><h4>Duo- óf groeps les</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Ook mogelijk als kinderen op verschillend niveau spelen</p><!-- /wp:paragraph --><!-- wp:group --><div class="wp-block-group prices__inner"><div class="wp-block-group__inner-container"><!-- wp:paragraph --><p>40,-<span> &#47; les</span></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>40,-<span> &#47; les</span></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column {"width":"26%"} --><div class="wp-block-column" style="flex-basis:26%"><!-- wp:heading {"level":4} --><h4>Maatwerk</h4><!-- /wp:heading --><!-- wp:paragraph --><p>Een uur lang persoonlijke begeleiding</p><!-- /wp:paragraph --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link">Neem contact op</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:column --><!-- wp:column {"width":"22%"} --><div class="wp-block-column" style="flex-basis:22%"><!-- wp:image {"id":114,"sizeSlug":"large","linkDestination":"none"} --><figure class="wp-block-image size-large"><img src="http://daniellehman.local/wp-content/uploads/2021/06/roan.jpg" alt="" class="wp-image-114"/></figure><!-- /wp:image --></div><!-- /wp:column --></div><!-- /wp:columns -->'
     )
   );
 

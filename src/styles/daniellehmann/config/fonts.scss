@@ -1,24 +1,25 @@
-$body-font: "PT Serif", serif;
-$heading-font: "Josefin Sans", sans-serif;
-$body-sans-font: "Ubuntu Condensed", sans-serif;
+$body-font: 'PT Serif', serif;
+$body-serif-font-light: 'Martel', serif;
+$heading-font: 'Josefin Sans', sans-serif;
+$body-sans-font: 'Ubuntu Condensed', sans-serif;
 
 @mixin body-font() {
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
   font-size: $paragraph-font-size--small;
   line-height: $paragraph-line-height--small;
 
-  @include mq("tablet", "min") {
+  @include mq('tablet', 'min') {
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
   }
 }
 
 @mixin header-font() {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: header-font-size--small;
   line-height: $header-line-height--small;
 
-  @include mq("tablet", "min") {
+  @include mq('tablet', 'min') {
     font-size: $header-font-size;
     line-height: $header-line-height;
   }
