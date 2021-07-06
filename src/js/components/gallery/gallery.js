@@ -11,12 +11,16 @@ export default class Gallery {
     this.elementsArray = this.elem.querySelectorAll('.blocks-gallery-item');
     this.imageObjects = [];
     this.galleryIsOpen = false;
+    this.thumbContainer = this.elem.querySelectorAll('.blocks-gallery-grid');
     this.swiper = '';
+    this.navPrev = '';
+    this.navNext = '';
     this.initialize();
   }
 
   initialize() {
     this.getImages();
+    this.createNavigation();
     this.addEvents();
   }
 
@@ -122,6 +126,22 @@ export default class Gallery {
     document.body.classList.remove('body-is-locked');
   }
 
+  // NAVIGATION CODE
+  createNavigation() {
+    const navContainer = this.elem.querySelector('.wp-block-gallery');
+    this.navPrev = document.createElement('div');
+    this.navPrev.className = 'gallery-prev';
+    this.navPrev.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    this.navNext = document.createElement('div');
+    this.navNext.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+    this.navNext.className = 'gallery-next';
+
+    this.elem.appendChild(this.navPrev);
+    this.elem.appendChild(this.navNext);
+  }
+
   // Click events etc
   addEvents() {
     // Open gallery on Image Click
@@ -130,5 +150,9 @@ export default class Gallery {
         this.jumpToImage(item, index);
       };
     });
+
+    this.navPrev.onclick = (e) => {
+      //const currentScroll = this.thumbContainer;
+    };
   }
 }

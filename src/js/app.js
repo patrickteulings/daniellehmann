@@ -1,4 +1,4 @@
-import '../styles/app.scss';
+// import '../styles/app.scss';
 
 import ElementToggle from './utilities/toggle/elementToggle.js';
 import ReadMore from './utilities/toggle/readMore.js';
@@ -11,8 +11,8 @@ const galleries = document.querySelectorAll('.gallery');
 for (let toggle of toggles) {
   toggle = new ElementToggle(toggle);
 }
-for (let intro of intros) {
-  readMore = new ReadMore(intro);
+for (let readMore of intros) {
+  readMore = new ReadMore(readMore);
 }
 
 for (let gallery of galleries) {

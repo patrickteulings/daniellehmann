@@ -409,7 +409,7 @@ function daniellehmann_scripts()
     // If not IE, use the standard stylesheet.
     // wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));
   }
-  wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/build/css/app.css', array(), wp_get_theme()->get('Version'));
+  // wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/dist/assets/app.css', array(), wp_get_theme()->get('Version'));
   // RTL styles.
   wp_style_add_data('twenty-twenty-one-style', 'rtl', 'replace');
 
@@ -452,7 +452,7 @@ function daniellehmann_scripts()
 
   wp_enqueue_script(
     'twenty-twenty-one-primary-navigation-script',
-    get_template_directory_uri() . '/build/js/app.min.js',
+    get_template_directory_uri() . '/dist/assets/app.js',
     array('twenty-twenty-one-ie11-polyfills'),
     wp_get_theme()->get('Version'),
     true
@@ -482,7 +482,7 @@ add_action('wp_enqueue_scripts', 'daniellehmann_scripts');
 
 function add_footer_styles()
 {
-  wp_enqueue_style('daniellehman', get_template_directory_uri() . '/build/css/app.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('daniellehman', get_template_directory_uri() . '/dist/assets/app.css', array(), '1.0.0', 'all');
 };
 
 add_action('get_footer', 'add_footer_styles');
