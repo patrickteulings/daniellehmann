@@ -1,7 +1,9 @@
 /* ----------------------------------------
   GALLERY THUMB SLIDER STYLES
 ---------------------------------------- */
-
+html {
+  scroll-behavior: smooth;
+}
 .gallery.wp-block-group {
   width: 100%;
   position: relative;
@@ -137,18 +139,19 @@
   margin-top: -22px;
   @include size(44px);
   cursor: pointer;
-
   border-radius: 50%;
   border: 1px solid white;
-
-  background: rgba(white, 1);
-
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 
   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+
+  @include mq('tablet', 'min') {
+    display: flex;
+  }
 }
 
 .gallery-prev {
@@ -161,7 +164,9 @@
     }
   }
 }
+
 .gallery-next {
+  transform: translateX(-22px);
   left: calc(50% + (1024px / 2));
 
   &:hover {

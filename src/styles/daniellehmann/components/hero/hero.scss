@@ -87,7 +87,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  opacity: 0.2;
+  //opacity: 0.2;
   width: 750px;
   height: 1050px;
   z-index: 0;
@@ -97,10 +97,17 @@
     height: 100%;
     background-repeat: no-repeat;
     background-position: right top;
+    opacity: 0;
+    @include transition;
+    will-change: opacity;
+
+    &.imageIsLoaded {
+      opacity: 1;
+    }
   }
 
   @include mq('tablet-wide', 'min') {
-    opacity: 1;
+    //opacity: 1;
   }
 }
 

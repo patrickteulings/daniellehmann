@@ -12,6 +12,7 @@ export default class Gallery {
     this.imageObjects = [];
     this.galleryIsOpen = false;
     this.thumbContainer = this.elem.querySelectorAll('.blocks-gallery-grid');
+    this.scrollContainer = this.elem.querySelectorAll('.wp-block-gallery');
     this.swiper = '';
     this.navPrev = '';
     this.navNext = '';
@@ -22,6 +23,7 @@ export default class Gallery {
     this.getImages();
     this.createNavigation();
     this.addEvents();
+    this.scrollToPosition(0);
   }
 
   // An initializer to create a nice array of objects
@@ -152,7 +154,36 @@ export default class Gallery {
     });
 
     this.navPrev.onclick = (e) => {
-      //const currentScroll = this.thumbContainer;
+      this.scrollToPosition(-200);
     };
+
+    this.navNext.onclick = (e) => {
+      this.scrollToPosition(+200);
+    };
+  }
+
+  scrollToPosition(difference) {
+    let currentScroll = this.scrollContainer[0].scrollLeft;
+    currentScroll += difference;
+
+    let containerWidth = this.scrollContainer[0].offsetWidth;
+
+    this.scrollContainer[0].scroll({
+      top: 0, // could be negative value
+      left: currentScroll,
+      behavior: 'smooth',
+    });
+
+    console.log(
+      this.thumbContainer[0].clientWidth,
+      containerWidth,
+      currentScroll
+    );
+
+    this.navPrev.style.opacity = currentScroll <= 0 ? '0.4' : '1';
+    this.navNext.style.opacity =
+      this.thumbContainer[0].clientWidth < containerWidth + currentScroll - 200
+        ? '0.4'
+        : '1';
   }
 }

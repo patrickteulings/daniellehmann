@@ -35,9 +35,7 @@ $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
             <?php if (get_field('hero_button_2_label')) : ?><div class="wp-block-button <?php the_field('hero_button_2_icon') ?>"><a href="<?php the_field('hero_button_1_link') ?>" class="wp-block-button__link"><?php the_field('hero_button_2_label') ?></a></div><?php endif; ?>
           </div>
         </div>
-        <div class="hero-image">
-          <div class="hero-image__inner" style="background-image: url(<?= $featured_img_url; ?>);"></div>
-        </div>
+        <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
     </header><!-- .entry-header -->
   <?php elseif (has_post_thumbnail()) : ?>

@@ -35,9 +35,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
           <?php get_template_part('template-parts/header/hero-intro'); ?>
           <?php get_template_part('template-parts/header/hero-buttons'); ?>
         </div>
-        <div class="hero-image">
-          <div class="hero-image__inner" style="background-image: url(<?= $featured_img_url; ?>);"></div>
-        </div>
+        <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
     </header><!-- .entry-header -->
   <?php elseif (has_post_thumbnail()) : ?>
@@ -48,9 +46,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
           <?php get_template_part('template-parts/header/hero-intro'); ?>
           <?php get_template_part('template-parts/header/hero-buttons'); ?>
         </div>
-        <div class="hero-image">
-          <div class="hero-image__inner" style="background-image: url(<?= $featured_img_url; ?>);"></div>
-        </div>
+        <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
 
     </header><!-- .entry-header -->
