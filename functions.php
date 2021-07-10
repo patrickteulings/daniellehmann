@@ -499,6 +499,7 @@ add_action('get_footer', 'add_footer_styles');
 function dl_custom_new_menu()
 {
   register_nav_menu('dl-related-items-menu', __('Related pages or sites'));
+  register_nav_menu('dl-locations-menu', __('Locations for classes'));
 }
 add_action('init', 'dl_custom_new_menu');
 

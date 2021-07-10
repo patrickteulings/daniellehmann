@@ -1,4 +1,8 @@
 .hero {
+  height: calc(100vh - 12rem);
+  margin-top: -12rem;
+  padding-top: 12rem;
+
   &__inner {
     max-width: 1232px;
     padding: 0 2rem;
@@ -89,7 +93,7 @@
   top: 0;
   //opacity: 0.2;
   width: 750px;
-  height: 1050px;
+  height: 100vh;
   z-index: 0;
 
   &__inner {
@@ -128,12 +132,6 @@
 
   .full {
     display: none;
-  }
-
-  p {
-    a {
-      color: #ffffff;
-    }
   }
 
   .read-more {

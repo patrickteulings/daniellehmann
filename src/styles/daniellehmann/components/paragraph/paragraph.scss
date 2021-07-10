@@ -16,24 +16,30 @@ p {
     position: relative;
     display: inline-block;
     z-index: 1;
+    color: $olive;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
-      left: 0;
-      bottom: 6px;
-      width: 100%;
-      height: 6px;
+      left: auto;
+      right: 0;
+      bottom: 4px;
+      width: 0%;
+      height: 2px;
       z-index: -1;
+      //opacity: 0;
       background-color: $olive; // GET OVERWRITTEN IN THEMES.SCSS
       @include transition;
     }
 
     &:hover {
       &:before {
-        opacity: 0.3;
+        left: 0;
+        right: auto;
+        width: 100%;
+        opacity: 0.8;
         // height: 0;
-        bottom: 0;
+        //bottom: 0;
       }
     }
   }

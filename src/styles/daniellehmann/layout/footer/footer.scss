@@ -87,6 +87,15 @@ footer {
             }
           }
         }
+
+        &.small {
+          a {
+            // font-size: 14px;
+            span {
+              color: #949494;
+            }
+          }
+        }
       }
     }
 

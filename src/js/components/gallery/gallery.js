@@ -21,6 +21,7 @@ export default class Gallery {
 
   initialize() {
     this.getImages();
+    this.setWrapperWidth();
     this.createNavigation();
     this.addEvents();
     this.scrollToPosition(0);
@@ -126,6 +127,12 @@ export default class Gallery {
     container.setAttribute('hidden', 'true');
     this.galleryIsOpen = false;
     document.body.classList.remove('body-is-locked');
+  }
+
+  setWrapperWidth() {
+    this.thumbContainer[0].style.width = `${
+      this.elementsArray.length * (272 + 16)
+    }px`;
   }
 
   // NAVIGATION CODE

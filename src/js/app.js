@@ -1,5 +1,7 @@
 // import '../styles/app.scss';
 
+import enterView from 'enter-view';
+
 import ElementToggle from './utilities/toggle/elementToggle.js';
 import ReadMore from './utilities/toggle/readMore.js';
 import Gallery from './components/gallery/gallery';
@@ -25,6 +27,9 @@ for (let gallery of galleries) {
 for (let heroImage of heroImages) {
   heroImage = HeroImage(heroImage);
 }
+
+// GOOGLE MAPS CALLBACK
+// @todo function isn't found on first call (see console.log).
 
 let map;
 
@@ -61,6 +66,13 @@ function initMap(testrun) {
     radius: 100,
   });
 }
+
+enterView({
+  selector: '.gallery',
+  enter: function (el) {
+    el.classList.add('entered');
+  },
+});
 
 initMap(true);
 

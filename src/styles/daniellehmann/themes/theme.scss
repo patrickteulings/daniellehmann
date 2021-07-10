@@ -20,6 +20,25 @@ body {
         fill: rgba($green, 0.6);
       }
     }
+
+    p {
+      a {
+        color: $green-accent;
+
+        &:before {
+          background-color: $green-accent;
+        }
+      }
+    }
+
+    .footer-cta .wp-block-columns .wp-block-column h3 a,
+    .footer-cta .wp-block-columns .wp-block-column p a {
+      color: $green-accent;
+
+      &:before {
+        background-color: $green-accent;
+      }
+    }
   }
 
   /* ----------------------------------------
@@ -39,6 +58,12 @@ body {
     .navigation-presentation-circle {
       svg circle {
         fill: rgba($darkgrey, 0.6);
+      }
+    }
+
+    p {
+      a {
+        color: $olive;
       }
     }
   }
@@ -61,6 +86,16 @@ body {
               color: $khaki-accent;
             }
           }
+        }
+      }
+    }
+
+    p {
+      a {
+        color: $khaki-accent;
+
+        &:before {
+          background-color: $khaki-accent;
         }
       }
     }
@@ -101,6 +136,38 @@ body {
       &:after {
         background: $fresh-blue;
       }
+    }
+
+    p {
+      a {
+        color: $fresh-blue-accent;
+
+        &:before {
+          background-color: $fresh-blue-accent;
+        }
+      }
+    }
+
+    .hero-content p a {
+      color: $fresh-blue-accent;
+
+      &:before {
+        background-color: $fresh-blue-accent;
+      }
+    }
+
+    .footer-cta .wp-block-columns .wp-block-column h3 a,
+    .footer-cta .wp-block-columns .wp-block-column p a {
+      color: $fresh-blue-accent;
+
+      &:before {
+        background-color: $fresh-blue-accent;
+      }
+    }
+
+    // Buttons in FOOTER CTA COLUMNS
+    .content-prices-wrapper .wp-block-button__link {
+      color: $fresh-blue-accent;
     }
   }
 }

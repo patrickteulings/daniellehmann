@@ -16,7 +16,7 @@
     .wp-block-columns {
       display: block;
 
-      @include mq("tablet", "min") {
+      @include mq('tablet', 'min') {
         display: flex;
       }
     }
@@ -34,7 +34,7 @@
     h3,
     p {
       a {
-        color: white;
+        // color: white;
 
         &:visited {
           // color: inherit;
@@ -50,6 +50,31 @@
 
       a {
         color: $olive;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: auto;
+          right: 0;
+          bottom: 4px;
+          width: 100%;
+          height: 2px;
+          z-index: -1;
+          //opacity: 0;
+          background-color: $olive; // GET OVERWRITTEN IN THEMES.SCSS
+          @include transition;
+        }
+
+        &:hover {
+          // opacity: 0.2;
+          &:before {
+            left: 0;
+            right: auto;
+            width: 100%;
+            opacity: 0.8;
+          }
+        }
       }
     }
 
@@ -71,13 +96,13 @@
       margin-top: 3rem;
     }
 
-    @include mq("tablet", "min") {
+    @include mq('tablet', 'min') {
       &:not(:first-child) {
         margin-left: 2rem;
         margin-top: 0;
       }
     }
-    @include mq("tablet-wide", "min") {
+    @include mq('tablet-wide', 'min') {
       &:not(:first-child) {
         margin-left: 6rem;
       }

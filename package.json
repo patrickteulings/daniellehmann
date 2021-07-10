@@ -72,6 +72,7 @@
   },
   "dependencies": {
     "css-loader": "^5.2.6",
+    "enter-view": "^2.0.1",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.1.1",
     "style-loader": "^3.0.0",
