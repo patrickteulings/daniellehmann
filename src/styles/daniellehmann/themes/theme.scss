@@ -21,6 +21,12 @@ body {
       }
     }
 
+    .primary-navigation ul li a {
+      &:after {
+        background: rgba($green, 0.2);
+      }
+    }
+
     p {
       a {
         color: $green-accent;
@@ -58,6 +64,12 @@ body {
     .navigation-presentation-circle {
       svg circle {
         fill: rgba($darkgrey, 0.6);
+      }
+    }
+
+    .primary-navigation ul li a {
+      &:after {
+        background: rgba($darkgrey, 0.2);
       }
     }
 
@@ -116,6 +128,12 @@ body {
       }
     }
 
+    .primary-navigation ul li a {
+      &:after {
+        background: rgba($khaki, 0.6);
+      }
+    }
+
     // Buttons
     [class*='outlined'] {
       &:after {
@@ -135,6 +153,12 @@ body {
     [class*='outlined'] {
       &:after {
         background: $fresh-blue;
+      }
+    }
+
+    .primary-navigation ul li a {
+      &:after {
+        background: rgba($fresh-blue, 0.2);
       }
     }
 

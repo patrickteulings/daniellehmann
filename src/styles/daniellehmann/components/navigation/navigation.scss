@@ -42,11 +42,13 @@
 
     &:after {
       content: '';
-      background: rgba(255, 255, 255, 0.2);
+      //background: rgba(255, 255, 255, 0.2);
+      background: rgba($green, 0.2);
       position: absolute;
       right: 0;
       left: auto;
       top: 0;
+      z-index: -1;
       height: 100%;
       width: 0%;
       @include transition();
