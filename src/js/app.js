@@ -68,9 +68,9 @@ function initMap(testrun) {
 }
 
 enterView({
-  selector: '.gallery',
+  selector: '.column-header',
   enter: function (el) {
-    el.classList.add('entered');
+    el.classList.add('inView');
   },
 });
 

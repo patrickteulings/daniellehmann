@@ -22,7 +22,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="column">
     <div class="column__title">
-      <h6>Menu</h6>
+      <h6 class="column-header">Menu</h6>
     </div>
     <?php if (has_nav_menu('footer')) : ?>
       <nav aria-label="<?php esc_attr_e('Secondary menu', 'daniellehmann'); ?>" class="footer-navigation">
@@ -46,7 +46,7 @@
   </div>
   <div class="column">
     <div class="column__title">
-      <h6>Meteen contact</h6>
+      <h6 class="column-header">Meteen contact</h6>
     </div>
 
     <nav aria-label="contact options" class="footer-navigation">
@@ -78,7 +78,7 @@
   </div>
   <div class="column">
     <div class="column__title">
-      <h6>Gerelateerd</h6>
+      <h6 class="column-header">Gerelateerd</h6>
     </div>
     <?php if (has_nav_menu('footer')) : ?> <nav aria-label="<?php esc_attr_e('Related menu', 'daniellehmann'); ?>" class="footer-navigation">
         <ul class="footer-navigation-wrapper related-items">

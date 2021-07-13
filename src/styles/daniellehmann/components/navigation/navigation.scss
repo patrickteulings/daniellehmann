@@ -90,6 +90,10 @@
   svg circle {
     stroke: rgba(white, 0.2);
   }
+
+  .is-open & {
+    opacity: 0.1;
+  }
 }
 
 /* ----------------------------------------

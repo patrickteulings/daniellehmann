@@ -1,9 +1,13 @@
+.entry {
+  transform: translateY(-12rem);
+  margin-bottom: -24rem;
+}
+
 .hero {
   min-height: 100vh;
   // margin-top: -12rem;
   // padding-top: 12rem;
   position: relative;
-  transform: translateY(-12rem);
   display: flex;
   align-items: center;
 
