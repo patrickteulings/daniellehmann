@@ -97,6 +97,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 
 /* Categories 01 to 03 are the basics. */
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 /* Variables */
 :root {
@@ -2577,58 +2578,44 @@ input[type=reset]:focus,
 }
 
 .site .button:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 button:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 input[type=submit]:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 input[type=reset]:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 .wp-block-search .wp-block-search__button:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 .wp-block-button .wp-block-button__link:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
 .wp-block-file a.wp-block-file__button:disabled {
-	background-color:
- rgba(255, 255, 255, 0.5);
-	border-color:
- rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
 }
 
@@ -7835,14 +7822,6 @@ h1.page-title {
 
 .widget_rss a.rsswidget .rss-widget-icon {
 	display: none;
-}
-
-.editor-styles-wrapper .footer-cta {
-	opacity: 0.2 !important;
-}
-
-.editor-styles-wrapper .footer-cta h3 {
-	font-family: "PT serif", Times !important;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

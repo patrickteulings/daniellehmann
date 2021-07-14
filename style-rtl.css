@@ -97,15 +97,14 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 
 /* Categories 01 to 03 are the basics. */
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 /* Variables */
 :root {
 
 	/* Font Family */
-	--global--font-primary:
- var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--font-secondary:
- var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
@@ -168,23 +167,19 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--color-orange: #e4dad1;
 	--global--color-yellow: #eeeadd;
 	--global--color-white: #fff;
-	--global--color-white-50:
- rgba(255, 255, 255, 0.5);
+	--global--color-white-50: rgba(255, 255, 255, 0.5);
 	--global--color-white-90: rgba(255, 255, 255, 0.9);
-	--global--color-primary:
- var(--global--color-dark-gray);
+	--global--color-primary: var(--global--color-dark-gray);
 
 	/* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray);
 
 	/* Headings */
 	--global--color-primary-hover: var(--global--color-primary);
-	--global--color-background:
- var(--global--color-white);
+	--global--color-background: var(--global--color-white);
 
 	/* Mint, default body background */
-	--global--color-border:
- var(--global--color-primary);
+	--global--color-border: var(--global--color-primary);
 
 	/* Used for borders (separators) */
 
@@ -201,8 +196,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text:
- var(--global--color-dark-gray);
+	--form--color-text: var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
 	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
@@ -5433,14 +5427,6 @@ h1.page-title {
 
 .widget_rss a.rsswidget .rss-widget-icon {
 	display: none;
-}
-
-.editor-styles-wrapper .footer-cta {
-	opacity: 0.2 !important;
-}
-
-.editor-styles-wrapper .footer-cta h3 {
-	font-family: "PT serif", Times !important;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

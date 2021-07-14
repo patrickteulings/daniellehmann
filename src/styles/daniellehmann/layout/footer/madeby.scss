@@ -1,0 +1,15 @@
+.madeby {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  transform: translateY(-15px);
+  font-family: $body-font;
+  a {
+    color: inherit;
+  }
+  svg {
+    transform: translateY(3px);
+    height: 12px;
+    fill: #fff;
+  }
+}

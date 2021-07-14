@@ -1,8 +1,18 @@
-.editor-styles-wrapper {
-  .footer-cta {
-    opacity: 0.2 !important;
-    h3 {
-      font-family: 'PT serif', Times !important;
-    }
+.footer-cta {
+  h3 {
+    font-family: 'PT serif', Times !important;
   }
+  h4 {
+    font-family: 'Ubuntu condensed', Times !important;
+    font-weight: 400;
+  }
+}
+
+p {
+  font-family: 'PT serif', Times !important;
+}
+
+.text-image-columns {
+  font-family: 'PT serif', Times !important;
+  font-weight: 400;
 }
