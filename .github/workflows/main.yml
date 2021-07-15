@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
@@ -15,3 +15,8 @@ jobs:
         username: deb58523n5
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: public_html/daniellehmann/wp-content/themes/daniellehmann/
+        exclude:
+          - **/.git*
+          - **/.git*/**
+          - **/node_modules/**
+
