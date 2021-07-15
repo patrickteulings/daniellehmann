@@ -51,7 +51,8 @@ body {
     DARK GREY
   ---------------------------------------- */
 
-  &.darkgrey {
+  &.darkgrey,
+  &.error404 {
     background-color: $darkgrey;
 
     // Buttons

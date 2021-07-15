@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  margin-top: 3rem;
+
+  .social__item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(white, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+
+  .social__item-icon {
+    svg {
+      position: relative;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      stroke: rgba(white, 0.4);
+    }
+  }
+}

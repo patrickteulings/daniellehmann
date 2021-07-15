@@ -1,0 +1,35 @@
+.search-form {
+  label {
+    // display: none;
+    @extend .screen-reader-text;
+  }
+  input[type='search'] {
+    // font-family: $body-font;
+    font-family: $body-sans-font;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 0;
+  }
+  input[type='submit'] {
+    font-family: $body-sans-font;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    background: #fff;
+    border: 0;
+    @include transition;
+
+    &:hover {
+      background: rgba(white, 0.7);
+    }
+  }
+}
+
+.hero-content__intro {
+  input[type='search'] {
+    width: 40%;
+  }
+
+  .search-form {
+    margin-top: 3rem;
+  }
+}

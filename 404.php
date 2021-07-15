@@ -13,16 +13,21 @@
 get_header();
 ?>
 
-<header class="page-header alignwide">
-  <h1 class="page-title"><?php esc_html_e('Nothing here', 'daniellehmann'); ?></h1>
+<header class="page-header alignwide hero">
+  <div class="hero__inner">
+    <div class="hero-content">
+
+      <div class="hero__title--mini">404</div>
+      <div class="hero__title">
+        <p>Hi! De pagina die je zocht,
+        <h1>bestaat helaas niet.</h1>
+        <p>probeer via het menu de juiste pagina te vinden of gebruik de zoekoptie!</p>
+      </div>
+      <?php get_template_part('template-parts/header/hero-404'); ?>
+    </div>
+  </div>
 </header><!-- .page-header -->
 
-<div class="error-404 not-found default-max-width">
-  <div class="page-content">
-    <p><?php esc_html_e('It looks like nothing was found at this location. Maybe try a search?', 'daniellehmann'); ?></p>
-    <?php get_search_form(); ?>
-  </div><!-- .page-content -->
-</div><!-- .error-404 -->
 
 <?php
 get_footer();

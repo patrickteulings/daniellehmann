@@ -211,6 +211,8 @@
   transform: translateX(-4000px);
   @include transition(height, 0.2s, $default-easing);
 
+  &__inner {
+  }
   // display: none;
 
   &__nav {

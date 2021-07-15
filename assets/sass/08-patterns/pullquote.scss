@@ -1,0 +1,13 @@
+.wp-block-pullquote {
+  border: none;
+
+  blockquote {
+    p {
+      font-family: 'PT serif', serif;
+      font-style: italic;
+    }
+    &:before {
+      display: none;
+    }
+  }
+}

@@ -2636,3 +2636,16 @@ p {
 .has-red-to-purple-gradient-background {
 	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
 }
+
+.wp-block-pullquote {
+	border: none;
+}
+
+.wp-block-pullquote blockquote p {
+	font-family: "PT serif", serif;
+	font-style: italic;
+}
+
+.wp-block-pullquote blockquote:before {
+	display: none;
+}
