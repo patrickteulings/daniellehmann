@@ -6,11 +6,13 @@ import ElementToggle from './utilities/toggle/elementToggle.js';
 import ReadMore from './utilities/toggle/readMore.js';
 import Gallery from './components/gallery/gallery';
 import HeroImage from './utilities/HeroImage';
+import { Cursor } from './utilities/mouseFollow';
 
 const toggles = document.querySelectorAll('[data-module="toggle"]');
 const intros = document.querySelectorAll('[data-module="readmore"]');
 const galleries = document.querySelectorAll('.gallery');
 const heroImages = document.querySelectorAll('.js-hero-image');
+const cursor = new Cursor();
 
 for (let toggle of toggles) {
   toggle = new ElementToggle(toggle);

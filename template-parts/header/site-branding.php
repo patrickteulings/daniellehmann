@@ -44,15 +44,16 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 
 <span data-module="toggle" data-config='{"toggleTrigger": ".hamburger", "toggleTarget": ".fullscreen-navigation", "activeClass":"is-open"}'>
   <div class="navigation-trigger-wrapper">
-    <button class="hamburger" aria-controls="fullscreen-navigation">
+    <button class="hamburger" aria-controls="fullscreen-navigation" data-stick-cursor>
       <span></span><span></span><span></span><span></span><span></span>
     </button>
-    <div class="navigation-presentation-circle">
-      <?php require_once(__DIR__ . '/../../assets/images/circle-large.svg'); ?>
+    <div class="navigation-presentation-circle"><span data-cursor style="position: fixed;">
+        <?php require_once(__DIR__ . '/../../assets/images/circle-large.svg'); ?>
+      </span>
     </div>
   </div>
 
-  <div class="fullscreen-navigation" aria-hidden="true">
+  <div class="fullscreen-navigation" id="fullscreen-navigation" aria-hidden="true">
     <?php if (has_nav_menu('primary')) : ?>
       <div class="fullscreen-navigation__content">
         <nav id="fullscreen-navigation" class="fullscreen-navigation__nav" role="navigation" aria-label="fullscreen-navigation">
