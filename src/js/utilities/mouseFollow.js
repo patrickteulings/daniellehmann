@@ -53,6 +53,7 @@ export class Cursor {
   }
 
   mousePos(e) {
+    console.log(e);
     this.data.mouse.x = e.pageX;
     this.data.mouse.y = e.pageY;
 
@@ -139,9 +140,8 @@ export class Cursor {
   }
 
   addListeners() {
-    const el = document.querySelector('.mouse-follow-trigger');
+    console.log('addListeners');
     window.addEventListener('mousemove', this.mousePos, { passive: true });
-    // el.addEventListener('mouseleave', this.mouseLeave, { passive: true });
   }
 
   init() {
