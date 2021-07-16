@@ -15,8 +15,3 @@ jobs:
         username: deb58523n5
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: public_html/daniellehmann/wp-content/themes/daniellehmann/
-        exclude:
-          - **/.git*
-          - **/.git*/**
-          - **/node_modules/**
-
