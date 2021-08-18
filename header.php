@@ -26,9 +26,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Martel:wght@200&display=swap" rel="stylesheet">
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
+  <style>
+    .top {
+      position: fixed;
+      top: 40px;
+      left: 10px;
+      color: white;
+      z-index: 8000;
+    }
+  </style>
 </head>
 
-<body <?php body_class(); ?>>
+<!-- GET THE PAGE'S (ACF) THEME COLOR CLASSNAME -->
+<?php
+$field = get_field_object('page_color');
+$value = $field['value'];
+?>
+
+<body <?php body_class($value); ?>>
+
   <?php wp_body_open(); ?>
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'daniellehmann'); ?></a>
