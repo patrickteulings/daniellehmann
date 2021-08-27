@@ -19,7 +19,7 @@ const Heroimage = (_elem) => {
         elem.style.backgroundImage = `url(${objectURL})`;
         setTimeout(() => {
           elem.classList.add(loadedClass);
-        }, 1000);
+        }, 200);
         isLoaded = true;
       });
   };

@@ -402,13 +402,8 @@ function daniellehmann_scripts()
   // Note, the is_IE global variable is defined by WordPress and is used
   // to detect if the current browser is internet explorer.
   global $is_IE, $wp_scripts;
-  if ($is_IE) {
-    // If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
-    wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get('Version'));
-  } else {
-    // If not IE, use the standard stylesheet.
-    // wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));
-  }
+
+  wp_enqueue_style('daniellehman', get_template_directory_uri() . '/dist/assets/app.css', array(), '1.0.0', 'all');
   // wp_enqueue_style('twenty-twenty-one-style', get_template_directory_uri() . '/dist/assets/app.css', array(), wp_get_theme()->get('Version'));
   // RTL styles.
   wp_style_add_data('twenty-twenty-one-style', 'rtl', 'replace');
@@ -485,7 +480,7 @@ function add_footer_styles()
   wp_enqueue_style('daniellehman', get_template_directory_uri() . '/dist/assets/app.css', array(), '1.0.0', 'all');
 };
 
-add_action('get_footer', 'add_footer_styles');
+// add_action('get_footer', 'add_footer_styles');
 
 
 /**
