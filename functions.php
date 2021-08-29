@@ -474,15 +474,6 @@ function daniellehmann_scripts()
 add_action('wp_enqueue_scripts', 'daniellehmann_scripts');
 
 
-
-function add_footer_styles()
-{
-  wp_enqueue_style('daniellehman', get_template_directory_uri() . '/dist/assets/app.css', array(), '1.0.0', 'all');
-};
-
-// add_action('get_footer', 'add_footer_styles');
-
-
 /**
  * Add a custom footer menu.
  *
