@@ -5,9 +5,8 @@
 .search-result-block {
   background: white;
   box-shadow: 0px 4px 30px rgb(black, 37%);
-  display: flex;
   max-width: 588px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 
   &.entry {
     transform: translateY(0);
@@ -19,5 +18,70 @@
 
   figure {
     @include size(100px);
+  }
+}
+
+// PAGE TITLE AND RESULTS TITLE
+.search-result {
+  &__page-title {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 2rem 6rem 2rem;
+    padding-bottom: 6rem;
+
+    h1 {
+      font-size: 48px;
+      font-family: $body-sans-font;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-bottom: 2rem;
+
+      .keyword {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+
+// SEPERATE RESULT BLOCKS
+
+.search-result {
+  &__content {
+    background: #EEEEEE;
+
+    @include mq('tablet', 'min') {
+      display: flex;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 2rem;
+    }
+  }
+
+  &__title {
+    font-family: $body-sans-font;
+    font-size: 24px;
+    padding: 2rem;
+
+    a{
+      color: $darkgrey;
+
+      &:visited {
+        color: $darkgrey;
+      }
+    }
+  }
+  &__background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    height: 160px;
+
+    @include mq('tablet', 'min') {
+      min-width: 160px;
+      min-height: 100%;
+    }
   }
 }

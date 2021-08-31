@@ -13,13 +13,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('search-result-block'); ?>>
-  <div class="search-result__image">
-  <?php
-  the_title(sprintf('<h2 class="entry-title default-max-width"><a href="%s">', esc_url(get_permalink())), '</a></h2>');
-  daniellehmann_post_thumbnail();
-  ?>
+  <div class="search-result__title">
+  <?php the_title(sprintf('<h2 class="entry-title"><a href="%s">', esc_url(get_permalink())), '</a></h2>'); ?>
   </div>
-  <div class="search-result__content entry-content">
-    <?php get_template_part('template-parts/excerpt/excerpt', get_post_format()); ?>
-  </div><!-- .entry-content -->
+  <div class="search-result__content">
+    <div class="search-result__background-image" style="background-image: url(<?php the_post_thumbnail_url('post-thumbnail', array('loading' => false)); ?>)"></div>
+    <div class="search-result__text">
+      <?php get_template_part('template-parts/excerpt/excerpt', get_post_format()); ?>
+    </div><!-- .entry-content -->
+  </div>
 </article><!-- #post-${ID} -->
