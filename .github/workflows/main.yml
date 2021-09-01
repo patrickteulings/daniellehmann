@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: ftp.patrickteulings.nl
+        server: sftp.patrickteulings.nl
         username: deb58523n5
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: public_html/daniellehmann/wp-content/themes/daniellehmann/
