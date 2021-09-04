@@ -477,6 +477,37 @@ a:hover {
 	margin-bottom: 30px;
 }
 
+.wp-block-button__link {
+	text-align: left;
+	padding: 0 56px 0 0;
+}
+
+.wp-block-button:after {
+	position: absolute;
+	display: block;
+	right: 0;
+	left: auto;
+	top: -3px;
+	content: "hoi";
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 4px 26px rgba(0, 0, 0, 0.25), 0 0 0 1px #fff;
+}
+
+.wp-block-button:before {
+	content: "";
+	width: 24px;
+	height: 24px;
+	background: url("../../assets/images/icons/feather-icons/chevron-right.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 2;
+	pointer-events: none;
+}
+
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
 	color: #fff;
 }
@@ -490,16 +521,19 @@ a:hover {
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-	background-color: #28303d;
+	background-color: transparent !important;
+	color: #28303d;
+	position: relative;
 }
 
 .has-background .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-	background-color: #28303d;
+	background-color: transparent !important;
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
-	border-color: currentColor !important;
+	border: 0;
+	border-color: transparent !important;
 	background-color: transparent !important;
 	color: inherit !important;
 }

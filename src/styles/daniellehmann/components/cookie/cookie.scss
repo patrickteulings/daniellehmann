@@ -1,0 +1,18 @@
+.cli-bar-container.cli-style-v2 {
+  padding: 2rem;
+
+  .cli-bar-message {
+    font-family: $body-font;
+  }
+
+  .cli-bar-btn_container {
+  }
+
+  .wt-cli-accept-all-btn {
+    border-radius: 3px;
+    padding: 1rem;
+    background-color: $green;
+    display: inline-block;
+
+  }
+}

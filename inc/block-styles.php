@@ -83,6 +83,43 @@ if (function_exists('register_block_style')) {
       )
     );
 
+
+    // Buttons: Button type & icons
+    register_block_style(
+      'core/button',
+      array(
+        'name'  => 'daniellehmann-button-phone',
+        'label' => esc_html__('Phone', 'daniellehmann'),
+      )
+    );
+
+    // Buttons: Button type & icons
+    register_block_style(
+      'core/button',
+      array(
+        'name'  => 'daniellehmann-button-phone-outlined',
+        'label' => esc_html__('Phone outlined', 'daniellehmann'),
+      )
+    );
+
+    // Buttons: Button type & icons
+    register_block_style(
+      'core/button',
+      array(
+        'name'  => 'daniellehmann-button-default',
+        'label' => esc_html__('Default', 'daniellehmann'),
+      )
+    );
+
+    // Buttons: Button type & icons
+    register_block_style(
+      'core/button',
+      array(
+        'name'  => 'daniellehmann-button-default-outlined',
+        'label' => esc_html__('Default outlined', 'daniellehmann'),
+      )
+    );
+
     // Media & Text: Borders.
     register_block_style(
       'core/media-text',
