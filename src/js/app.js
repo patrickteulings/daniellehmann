@@ -70,10 +70,16 @@ function initMap(testrun) {
 }
 
 enterView({
-  selector: '.column-header',
+  // selector: '.hero-content .hero-content__intro',
+  // enter: function (el) {
+  //   el.classList.add('inView');
+  // },
+
+  selector: '.hero-content .wp-block-buttons, .hero-content .hero-content__intro, .hero__title',
   enter: function (el) {
     el.classList.add('inView');
   },
+
 });
 
 initMap(true);
