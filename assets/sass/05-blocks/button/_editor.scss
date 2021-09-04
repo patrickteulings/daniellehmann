@@ -23,10 +23,12 @@
 }
 
 .wp-block-button {
+  margin-right: 16px;
 
   &__link {
     text-align: left;
     padding: 0 56px 0 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
   }
 
   &:after {
@@ -34,10 +36,10 @@
     display: block;
     right: 0px;
     left: auto;
-    top: -3px;
-    content: 'hoi';
-    width: 40px;
-    height: 40px;
+    top: -5px;
+    content: '';
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #fff;
   }
@@ -50,7 +52,7 @@
     background-repeat: no-repeat;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 6px;
     z-index: 2;
     pointer-events: none;
   }
@@ -93,7 +95,7 @@
 		// Hover Button color should match parent element foreground color
 		.wp-block-button__link:hover,
 		.wp-block-button__link:active {
-			border: 0px;
+			// border: 0px;
       border-color: transparent !important;
 			background-color: transparent !important;
 			color: inherit !important;
