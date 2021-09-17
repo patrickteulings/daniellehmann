@@ -53,7 +53,6 @@ export class Cursor {
   }
 
   mousePos(e) {
-    console.log(e);
     this.data.mouse.x = e.pageX;
     this.data.mouse.y = e.pageY;
 
@@ -104,10 +103,10 @@ export class Cursor {
 
       this.el.classList.add('is-active');
     } else if (this.state.stick) {
-      this.state.stick = false;
-      this.data.ease = 0.15;
+        this.state.stick = false;
+        this.data.ease = 0.15;
     } else if (h > this.data.dist) {
-      this.el.classList.remove('is-active');
+        this.el.classList.remove('is-active');
     }
   }
 
@@ -140,7 +139,6 @@ export class Cursor {
   }
 
   addListeners() {
-    console.log('addListeners');
     window.addEventListener('mousemove', this.mousePos, { passive: true });
   }
 

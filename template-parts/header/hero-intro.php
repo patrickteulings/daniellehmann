@@ -4,15 +4,22 @@
  * Displays the post header
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Daniel Lehmann
+ * @since Daniel Lehmann 1.0
  */
 $maxTextLength = 400;
 $in = get_field('hero_intro');
 $out = strlen($in) > $maxTextLength ? substr($in, 0, $maxTextLength) . "..." : $in;
 $hasReadMore = strlen($in) > $maxTextLength ? true . "..." : false;
 
+/**
+ * This read-more system
+ * is hijacked by JS, please leave it though in case someone does not have JS,
+ * or the user fogets to implement
+ * the BREAK word
+*/
 ?>
+
 
 <div class="hero-content__intro" data-module="readmore" data-config='{"toggleTrigger":".read-more", "toggleLessTrigger":".read-less"}' data-fulltext='<?= $in ?>'>
   <div class="excerpt">
