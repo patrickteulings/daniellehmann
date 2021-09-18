@@ -11,4 +11,5 @@
 ?>
 <div class="hero__title--mini"><?= the_title(); ?></div>
 <div class="hero__title"><?= get_field('page_title'); ?></div>
+
 <?php

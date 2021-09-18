@@ -37,6 +37,7 @@ $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
         </div>
         <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
+      <?php get_template_part('template-parts/header/hero-scroll'); ?>
     </header><!-- .entry-header -->
   <?php elseif (has_post_thumbnail()) : ?>
     <header class="entry-header alignwide">

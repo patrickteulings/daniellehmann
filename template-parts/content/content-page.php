@@ -37,6 +37,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
         </div>
         <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
+      <?php get_template_part('template-parts/header/hero-scroll'); ?>
     </header><!-- .entry-header -->
   <?php elseif (has_post_thumbnail()) : ?>
     <header class="entry-header alignwide hero">
@@ -48,7 +49,7 @@ $hasReadMore = strlen($in) > 200 ? true . "..." : false;
         </div>
         <?php get_template_part('template-parts/header/hero-image'); ?>
       </div>
-
+      <?php get_template_part('template-parts/header/hero-scroll'); ?>
     </header><!-- .entry-header -->
   <?php endif; ?>
 
