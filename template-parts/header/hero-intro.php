@@ -30,10 +30,14 @@ $hasReadMore = strlen($in) > $maxTextLength ? true . "..." : false;
       </span>
     <?php endif; ?>
   </div>
-  <div class="full" aria-hidden="true">
+  <div class="full" aria-hidden="false">
     <?php echo $in ?>
-    <span class="read-less">
+    <!-- <span class="read-less">
+      <?php include(get_stylesheet_directory() . "/assets/images/icons/feather-icons/chevrons-left.svg"); ?>
+    </span> -->
+  </div>
+  <span class="read-less">
       <?php include(get_stylesheet_directory() . "/assets/images/icons/feather-icons/chevrons-left.svg"); ?>
     </span>
-  </div>
+
 </div>

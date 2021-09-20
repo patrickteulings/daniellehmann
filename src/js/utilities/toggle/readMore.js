@@ -12,7 +12,6 @@ export default class ReadMore {
   }
 
   initialize() {
-    this.isOpen =
     this.config.initialState && !this.config.initialState === 'open';
     this.trigger = this.elem.querySelector(this.config.toggleTrigger);
     this.triggerLess = this.elem.querySelector(this.config.toggleLessTrigger);
@@ -24,13 +23,18 @@ export default class ReadMore {
   }
 
   addEvents() {
-
     if (this.trigger) this.trigger.onclick = (e) => this.toggleElement(e);
-    if (this.triggerLess)
-      this.triggerLess.onclick = (e) => this.toggleElement(e);
+    if (this.triggerLess) {
+      this.triggerLess.onclick = (e) => {
+        this.toggleElement(e)
+        console.log('vlick');
+      };
+      console.log('ja...', this.triggerLess);
+    }
   }
 
   toggleElement() {
+    console.log(this.isOpen);
     if (this.isOpen) {
       this.closeElement();
     } else {
@@ -58,15 +62,28 @@ export default class ReadMore {
 
   shortenText () {
     const shortEl = this.elem.querySelector('.excerpt');
+    const fullTextEl = this.elem.querySelector('.full');
     const shortText = this.elem.querySelector('.excerpt').innerHTML;
     const fullText = this.elem.querySelector('.full').innerHTML;
 
-    if (fullText.search(this.breakWord) === -1) return;
+    if (fullText.search(this.breakWord) === -1) {
+      // setTimeout(() => this.addEvents(), 1000);
+      return;
+    }
 
     const split = fullText.split(this.breakWord);
 
     shortEl.innerHTML = `${split[0]}...<span class="read-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></span></p>`;
     this.trigger = this.elem.querySelector(this.config.toggleTrigger);
+    this.triggerLess = this.elem.querySelector(this.config.toggleLessTrigger);
+
+    // Full text also has the BREAK word in it, so let's fix that
+
+    const start = fullText.search(this.breakWord);
+    const end = fullText.search(this.breakWord) + this.breakWord.length;
+
+    fullTextEl.innerHTML = fullText.split(this.breakWord).join('');
+
     setTimeout(() => this.addEvents(), 1000);
   }
 }

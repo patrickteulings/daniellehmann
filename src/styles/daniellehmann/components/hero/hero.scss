@@ -166,15 +166,21 @@
     // color: $olive;
     position: relative;
     top: 5px;
+    z-index: 2000;
+    display: none;
     cursor: pointer;
 
     svg {
       stroke: $olive;
+      pointer-events: none;
     }
   }
 
   &.is-open {
     .full {
+      display: block;
+    }
+    .read-less {
       display: block;
     }
     .excerpt {
