@@ -4,7 +4,7 @@
 
 .wp-block-buttons {
   & > .wp-block-button {
-    margin-right: 40px;
+    margin-right: 78px;
   }
 }
 
@@ -14,12 +14,17 @@
   position: relative;
   padding-bottom: 1rem;
 
-  &:not(:first-child) {
-    padding-left: 1rem;
+
+  &:first-child {
+    margin-right: 1rem !important;
   }
 
   @include mq('tablet', 'min') {
     padding-bottom: 0;
+
+    &:not(:first-child) {
+      padding-left: 1rem;
+    }
   }
 
   &:after {

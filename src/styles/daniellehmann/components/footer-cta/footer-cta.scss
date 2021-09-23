@@ -110,8 +110,10 @@
   }
 
   .wp-block-buttons {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    @include mq('tablet', 'min') {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
   }
 }
