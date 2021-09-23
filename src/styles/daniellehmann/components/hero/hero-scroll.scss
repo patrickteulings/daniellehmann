@@ -4,11 +4,14 @@
   bottom: 40px;
   width: 40px;
   height: 100px;
+  opacity: 1;
 
   @include mq('tablet-wide', 'max') {
     left: auto;
     right: 10px;
-    bottom: 70px;
+    bottom: auto;
+    top: calc(100vh - 120px);
+    opacity: 0.3;
     width: auto;
   }
 }
