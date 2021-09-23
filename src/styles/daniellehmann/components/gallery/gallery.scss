@@ -4,6 +4,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .gallery.wp-block-group {
   width: 100%;
   position: relative;
@@ -73,7 +74,7 @@ html {
 
 .swiper-container {
   &.gallery-container {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     position: fixed;
     left: 0;
     top: 0;
@@ -96,7 +97,9 @@ html {
 
 .swiper-button-next,
 .swiper-button-prev {
+
   &:after {
+    @include transition;
     color: #ffffff;
     font-size: 30px !important;
   }
@@ -105,9 +108,21 @@ html {
 .gallery-container {
   .swiper-button-next {
     right: 2rem;
+
+    &:hover {
+      &:after {
+        transform: translateX(5px);
+      }
+    }
   }
   .swiper-button-prev {
     left: 2rem;
+
+    &:hover {
+      &:after {
+        transform: translateX(-5px);
+      }
+    }
   }
 }
 
@@ -121,6 +136,11 @@ html {
   right: 2rem;
   bottom: auto;
   @include size(30px);
+  @include transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .blocks-gallery-item:nth-child(7) {
