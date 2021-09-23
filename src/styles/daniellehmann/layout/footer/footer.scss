@@ -7,10 +7,11 @@ footer {
   margin: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  @include innerspace(8rem, 4rem);
+  padding: 4rem 4rem;
   overflow: hidden;
 
   @include mq('tablet', 'min') {
+    @include innerspace(8rem, 4rem);
     grid-template-columns: 1fr 1fr;
     display: grid;
   }
@@ -51,13 +52,17 @@ footer {
     }
 
     &__title {
-      height: 5rem;
+      height: 3rem;
+
+      @include mq('tablet', 'min') {
+        height: 5rem;
+      }
 
       h6 {
         font-weight: 600;
         font-size: 22px;
         position: relative;
-        opacity: 0;
+        opacity: 1;
         @include transition(all, 0.2s, $default-easing, 0.2s);
 
         &.inView {
