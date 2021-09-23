@@ -6,7 +6,8 @@
   height: 100px;
 
   @include mq('tablet-wide', 'max') {
-    display: none;
+    left: 90%;
+    // display: none;
   }
 }
 

@@ -27,9 +27,7 @@ export default class ReadMore {
     if (this.triggerLess) {
       this.triggerLess.onclick = (e) => {
         this.toggleElement(e)
-        console.log('vlick');
       };
-      console.log('ja...', this.triggerLess);
     }
   }
 
@@ -48,6 +46,7 @@ export default class ReadMore {
     this.isOpen = true;
 
     const el = this.elem.querySelector('.full');
+
     el.setAttribute('aria-hidden', 'false');
   }
 
@@ -57,6 +56,7 @@ export default class ReadMore {
     this.isOpen = false;
 
     const el = this.elem.querySelector('.full');
+
     el.setAttribute('aria-hidden', 'true');
   }
 
@@ -67,7 +67,6 @@ export default class ReadMore {
     const fullText = this.elem.querySelector('.full').innerHTML;
 
     if (fullText.search(this.breakWord) === -1) {
-      // setTimeout(() => this.addEvents(), 1000);
       return;
     }
 
