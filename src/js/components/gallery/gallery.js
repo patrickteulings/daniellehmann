@@ -20,6 +20,7 @@ export default class Gallery {
   }
 
   initialize() {
+    console.log('galley initialised');
     this.getImages();
     this.setWrapperWidth();
     this.createNavigation();
