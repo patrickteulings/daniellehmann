@@ -185,7 +185,8 @@ export default class Gallery {
     console.log(
       this.thumbContainer[0].clientWidth,
       containerWidth,
-      currentScroll
+      currentScroll,
+      'iets'
     );
 
     this.navPrev.style.opacity = currentScroll <= 0 ? '0.4' : '1';
